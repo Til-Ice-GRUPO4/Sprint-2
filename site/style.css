@@ -1,37 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .background{
     background-color: #081c29;
     min-height: 100vh;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items:center;
 }
 
 .login {
-    background-color: #F3F7FA; 
-    padding: 40px 00px;
+    background-color: #F3F7FA;
+    padding: 2em 1em;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 600px;
-    gap: 8px;
-    margin-top: 40px;
+    gap: 1.5em;
 
+    img {
+        width: 110px;
+        height: auto;
+    }
 }
 
-.login img{
-    width: 110px;
-    height: auto;
-    display: block;
+.title {
+    font-size: 38px;
 }
 
 input {
     width: 390px;
-    padding: 12px;
+    padding: 10px;
     border: 2px solid #0d2333;
-    border-radius: 20px;
+    border-radius: 15px;
     font-size: 14px;
     background-color: #F3F7FA;
+    color: #0D2333;
 }
 
 button {
@@ -41,19 +49,17 @@ button {
     color: white;
     border: none;
     border-radius: 20px;
-    font-size: 30px;
+    font-size: 28px;
     cursor: pointer;
-    margin-top: 16px;
 }
 
 label {
     align-self: flex-start;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 a {
-    font-size: 18px;
-    margin-top: 5px;
+    font-size: 12px;
     color: #0D2333;
 }
 
@@ -67,6 +73,13 @@ h3{
     color: #0D2333;
 }
 
+.campos-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+}
+
 .campo {
     display: flex;
     flex-direction: column;
@@ -74,7 +87,66 @@ h3{
     color: #0D2333;
 }
 
-body{
-    margin: 0;
-    padding: 0;
+/* TELA DE CADASTRO */
+.login-top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.login-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .75em;
+    margin: 1em 0;
+}
+
+.progress-bar{
+    display: flex;
+    border-radius: 30px;
+    border: 1px solid #081C29;
+    overflow: hidden;
+    width: 75%;
+
+    .progress-element{
+        /* background-color: #1ab8c4; */
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 50%;
+        gap: .5em;
+    }
+    
+    .progress-element-complete {
+        background-color: #1ab8c4;
+    }
+    
+    .progress-element-dados-iniciais {
+        border-right: 2px solid #081C29;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .progress-element:nth-child(2) {
+        justify-content: flex-end;
+    }
+}
+
+.progress-number {
+    border-radius: 50%;
+    background-color: #081C29;
+    color: white;
+    height: 100%;
+    width: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.progress-text {
+    font-size: 14px;
 }
