@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --primary-color: #081c29;
+    --secondary-color: #1ab8c4;
+    --tertiary-color: #267dd5;
+    --other-color: #0d2333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--primary-color);
+    height: 70px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: .2em 3em;
+    height: 100%;
+}
+
+.header-title-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .25em;
+}
+
+.header-title {
+    font-weight: 800;
+    font-size: 80%;
+}
+
+.header-buttons-box {
+    display: flex;
+    gap: 5em;
+
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 4em;
+        height: 100%;
+        align-items: center;
+        font-weight: 400;
+        font-size: 18px;
+
+        li a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+    
+    .header-login-box {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        gap: 2em;
+    }
+}
+
+.button {
+    border-radius: 10px;
+    border: 1px solid white;
+    padding: .5em 2em;
+    height: min-content;
+    font-weight: 800;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+
+.primary-button {
+    background-color: var(--secondary-color);
+}
+
+.secondary-button {
+    background-color: var(--primary-color);
+}
+
+.tertiary-button {
+    background-color: var(--tertiary-color);
+}
+
+/* --> MAIN <-- */
+.index-main {
+    background-image: url(/images/background.png);
+}
+
+main {
+    width: 100%;
+    flex-grow: 1;
+    background-size: cover;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8em;
+    gap: 4em;
+
+    /* section {
+        width: 50%;
+    } */
+}
+
+.main-section-right {
+    
+    img {
+        width: 500px;
+    }
+}
+
+.main-section-left {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+
+    h2 {
+        font-weight: 800;
+        letter-spacing: .05em;
+    }
+    
+    span {
+        font-weight: 100;
+        letter-spacing: .05em;
+    }
+    
+    p {
+        font-weight: 200;
+    }
+}
+
+.main-section-left-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.main-section-left-buttons {
+    display: flex;
+    gap: 2em;
+
+    button {
+        border: 0;
+    }
+}
+
+/* PÁG - EQUIPE */
+.equipe-main-container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 3em;
+
+    .main-title {
+        h2 {
+            font-size: 32px;
+            color: var(--primary-color);
+        }
+    }
+
+    .main-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2em 6em;
+
+        .grid-cel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                border-radius: 50%;
+                width: 80%;
+                border: 1px solid var(--primary-color);
+            }
+
+            span {
+                color: var(--primary-color);
+                text-align: center;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+/* PÁG - SOBRE */
+.sobre-main {
+    background-color: var(--other-color);
+}
