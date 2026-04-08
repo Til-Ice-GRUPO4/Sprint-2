@@ -24,12 +24,22 @@ CREATE TABLE usuario (
 	CONSTRAINT ctfkEmpresa FOREIGN KEY(fk_empresa) REFERENCES empresa(id_empresa)
 );
 
+-- Criando a tabela 'lote'
+
+CREATE TABLE lote(
+	id_lote INT PRIMARY KEY AUTO_INCREMENT,
+    codigo_lote VARCHAR(45),
+    dt_transporte_inicio DATETIME DEFAULT CURRENT_TIMESTAMP(),
+    dt_transporte_final DATETIME DEFAULT CURRENT_TIMESTAMP()    
+);
+
 -- Criando a tabela 'container'
 CREATE TABLE container (
 	id_container INT PRIMARY KEY AUTO_INCREMENT,
 	apelido VARCHAR(45),
 	dt_cadastro_container DATETIME,
-    -- (discutir em grupo "lote" dt_transporte_inicio dt_transporte_fim)
+    fk_lote INT,
+    CONSTRAINT ctklote FOREIGN KEY(fk_lote) REFERENCES lote(id_lote),
 	fk_empresa INT,
 	CONSTRAINT ctfkContainer_Empresa FOREIGN KEY(fk_empresa) REFERENCES empresa(id_empresa)
 );
@@ -38,7 +48,7 @@ CREATE TABLE sensor(
 	id_sensor INT PRIMARY KEY AUTO_INCREMENT,
 	apelido VARCHAR(45),
 	codigo_sensor VARCHAR(45),
-	dt_cadastro_sensor VARCHAR(45),
+	dt_cadastro_sensor DATETIME DEFAULT CURRENT_TIMESTAMP(),
 	fk_container INT,
 	CONSTRAINT ctfkContainer FOREIGN KEY(fk_container) REFERENCES container(id_container)
 );
@@ -53,6 +63,7 @@ CREATE TABLE registro (
 	CONSTRAINT ctFkregistro_Container FOREIGN KEY (fk_container) REFERENCES container(id_container)
 );
 
+-- Dados inseridos mockados para simulação
 -- Inserindo registros a tabela 'empresa'
 INSERT INTO empresa (nome_empresa, cnpj) VALUES
 	('GeneSeas', '04459073000105'),
@@ -67,34 +78,79 @@ INSERT INTO usuario (nome_usuario, email, nome_completo, senha, cpf, adm, fk_emp
     ('funcionario3', 'funcionario3@empresa.com', 'Funcionario 3', '@Senha267','12345678907', 0, 2),
     ('funcionario4', 'funcionario4@empresa.com', 'Funcionario 4', '@Senha2','12345678909', 0, 2);
     
--- Inserindo registros a tabela 'container'
-INSERT INTO container (apelido, dt_cadastro_container, fk_empresa) VALUES 
-    ('CONT-A100', CURRENT_TIMESTAMP, 1),
-    ('CONT-B200', CURRENT_TIMESTAMP, 1),
-    ('CONT-C300', CURRENT_TIMESTAMP, 1),
-    ('CONT-BA15', CURRENT_TIMESTAMP, 2),
-    ('CONT-A234', CURRENT_TIMESTAMP, 2),
-    ('CONT-F029', CURRENT_TIMESTAMP, 2);
-    
--- Inserindo registros a tabela 'sensor'
-INSERT INTO sensor (apelido, codigo_sensor, dt_cadastro_sensor, fk_container) VALUES 
-    ('DHT11-01', 'SN-DHT11-A1', CURRENT_TIMESTAMP, 1),
-    ('DHT11-02', 'SN-DHT11-B2', CURRENT_TIMESTAMP, 2),
-    ('DHT11-03', 'SN-DHT11-C3', CURRENT_TIMESTAMP, 3),
-    ('DHT11-04', 'SN-DHT11-D4', CURRENT_TIMESTAMP, 4),
-    ('DHT11-05', 'SN-DHT11-E5', CURRENT_TIMESTAMP, 5),
-    ('DHT11-06', 'SN-DHT11-F6', CURRENT_TIMESTAMP, 6);
-    
--- Inserindo registros a tabela 'registro'
-INSERT INTO registro (temperatura, umidade, fk_container) VALUES
-	(22.50, 60.00, 1),
-	(-5.20, 15.30, 2),
-	(18.00, 45.50, 3),
-	(9.50, 13.40, 4),
-	(-11.83, 22.30, 5),
-	(27.31, 65.50, 6);
+-- 1. Inserindo registros na tabela 'lote'
+INSERT INTO lote (codigo_lote, dt_transporte_inicio, dt_transporte_final) VALUES
+	('BRFISH-TIL-2024-001', '2024-04-01 08:00:00', '2024-04-03 14:00:00'),
+	('BRFISH-TIL-2024-002', '2024-04-02 10:30:00', '2024-04-04 16:20:00'),
+	('GENES-TIL-2024-055', '2024-04-01 07:45:00', '2024-04-02 20:00:00'),
+	('GENES-TIL-2024-056', '2024-04-03 09:15:00', '2024-04-05 11:30:00');
 
--- Exibindo dados
+-- 2. Inserindo registros na tabela 'container'
+INSERT INTO container (apelido, dt_cadastro_container, fk_lote, fk_empresa) VALUES 
+    ('CONT-BR-10', '2024-03-15 14:00:00', 1, 2),
+    ('CONT-BR-20', '2024-03-15 14:30:00', 2, 2), 
+    ('CONT-GS-01', '2024-03-20 09:00:00', 3, 1),
+    ('CONT-GS-02', '2024-03-20 09:15:00', 4, 1);
+
+-- 3. Inserindo registros na tabela 'sensor' com datas manuais
+INSERT INTO sensor (apelido, codigo_sensor, dt_cadastro_sensor, fk_container) VALUES 
+    ('DHT11-L01', 'SN-A1', '2024-03-21 10:00:00', 1),
+    ('DHT11-L02', 'SN-B2', '2024-03-21 10:05:00', 2),
+    ('DHT11-L03', 'SN-C3', '2024-03-21 10:10:00', 3),
+    ('DHT11-L04', 'SN-D4', '2024-03-21 10:15:00', 4);
+
+-- 4. Inserindo registros na tabela 'registro' com datas manuais
+INSERT INTO registro (temperatura, umidade, dt_registro, fk_container) VALUES
+	(-18.50, 10.00, '2024-04-01 12:00:00', 1),
+	(-19.20, 09.50, '2024-04-01 13:00:00', 1),
+	(1.50, 40.00, '2024-04-01 12:00:00', 3), 
+	(2.10, 42.00, '2024-04-01 13:00:00', 3); 
+    
+-- Mostrar tabelas separadas:    
+SELECT * FROM container;
+
+SELECT * FROM empresa;
+
+SELECT * FROM lote;
+
+SELECT * FROM registro;
+
+SELECT * FROM sensor;
+
+-- Exibindo a mercadoria da empresa Brazilian Fish
+
+SELECT
+	e.nome_empresa AS 'Nome da empresa:',
+    r.temperatura AS 'Temperatura:',
+    r.dt_registro AS 'Registro da temperatura:',
+	c.apelido AS 'Nome do conteiner:',
+    l.codigo_lote AS 'Código da entrega:'
+FROM Empresa as e
+	JOIN Container as c
+    ON c.fk_empresa = e.id_empresa
+    JOIN Registro as r
+    ON r.fk_container = c.id_container
+    JOIN Lote as l
+    ON c.fk_lote = l.id_lote
+WHERE e.nome_empresa = 'Brazilian Fish';
+
+-- Exibindo a mercadoria da empresa GeneSeas
+
+SELECT
+	e.nome_empresa AS 'Nome da empresa:',
+    r.temperatura AS 'Temperatura:',
+    r.dt_registro AS 'Registro da temperatura:',
+	c.apelido AS 'Nome do conteiner:',
+    l.codigo_lote AS 'Código da entrega:'
+FROM Empresa as e
+	JOIN Container as c
+    ON c.fk_empresa = e.id_empresa
+    JOIN Registro as r
+    ON r.fk_container = c.id_container
+    JOIN Lote as l
+    ON c.fk_lote = l.id_lote
+WHERE e.nome_empresa = 'GeneSeas';
+
 -- Exibindo o relacionamento da tabela 'empresa' e 'usuario'
 SELECT
 	u.nome_usuario 'Nome dos administradores:',
@@ -104,26 +160,3 @@ FROM usuario u
 	JOIN empresa e
 		ON u.fk_empresa = e.id_empresa
 WHERE u.adm = 1;
-
--- Exibindo dados da tabela 'container'
-SELECT 
-	c.apelido AS 'Apelido',
-	c.codigo_sensor AS 'Código do Sensor',
-	c.dtContainer AS 'Data da chegada do Container',
-	e.nome_empresa AS 'Empresa proprietaria do Container',
-	e.cnpj AS 'CNPJ da Empresa'
-FROM container AS c
-	JOIN empresa AS e
-		ON c.fkEmpresa = e.id_empresa;
-
-SELECT * FROM container;
-
--- Exibindo dados da tabela 'registro'
-SELECT 
-	c.codigo_sensor AS 'Código do Sensor',
-	r.temperatura AS 'Temperatura',
-	r.umidade AS 'Umidade',
-	r.dtRegistro AS 'Data do Registro'
-FROM registro AS r
-	JOIN container AS c
-		ON r.fkContainer = c.id_container;
