@@ -1,2 +1,4 @@
-create user 'user_insert' IDENTIFIED BY 'sptech';
-grant insert on nomedatabase * to 'user_insert'@'3306';
+CREATE USER 'user_insert'@'%' IDENTIFIED BY '@Senha242';
+GRANT INSERT ON TIL_ICE.registro TO 'user_insert'@'%';
+
+FLUSH PRIVILEGES;
