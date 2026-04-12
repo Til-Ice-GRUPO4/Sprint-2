@@ -59,8 +59,8 @@ CREATE TABLE registro (
 	temperatura DECIMAL(5,2),
 	umidade DECIMAL(5,2),
 	dt_registro DATETIME DEFAULT CURRENT_TIMESTAMP(),
-	fk_container INT,
-	CONSTRAINT ctFkregistro_Container FOREIGN KEY (fk_container) REFERENCES container(id_container)
+	fk_sensor INT,
+	CONSTRAINT ctfk_sensor FOREIGN KEY (fk_sensor) REFERENCES sensor(id_sensor)
 );
 
 -- Dados inseridos mockados para simulação
@@ -100,7 +100,7 @@ INSERT INTO sensor (apelido, codigo_sensor, dt_cadastro_sensor, fk_container) VA
     ('DHT11-L04', 'SN-D4', '2024-03-21 10:15:00', 4);
 
 -- 4. Inserindo registros na tabela 'registro' com datas manuais
-INSERT INTO registro (temperatura, umidade, dt_registro, fk_container) VALUES
+INSERT INTO registro (temperatura, umidade, dt_registro, fk_sensor) VALUES
 	(-18.50, 10.00, '2024-04-01 12:00:00', 1),
 	(-19.20, 09.50, '2024-04-01 13:00:00', 1),
 	(1.50, 40.00, '2024-04-01 12:00:00', 3), 
@@ -129,7 +129,7 @@ FROM Empresa as e
 	JOIN Container as c
     ON c.fk_empresa = e.id_empresa
     JOIN Registro as r
-    ON r.fk_container = c.id_container
+    ON r.fk_sensor = c.id_container
     JOIN Lote as l
     ON c.fk_lote = l.id_lote
 WHERE e.nome_empresa = 'Brazilian Fish';
@@ -146,7 +146,7 @@ FROM Empresa as e
 	JOIN Container as c
     ON c.fk_empresa = e.id_empresa
     JOIN Registro as r
-    ON r.fk_container = c.id_container
+    ON r.fk_sensor = c.id_container
     JOIN Lote as l
     ON c.fk_lote = l.id_lote
 WHERE e.nome_empresa = 'GeneSeas';
