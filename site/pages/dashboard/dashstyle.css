@@ -1,0 +1,326 @@
+body{
+      display: flex;
+    background-color: #B8B8B9;
+     overflow-x: hidden;
+       font-family: 'Exo 2', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+.barra_lateral{
+  background:#081C29;
+  display: flex;
+   flex-direction: column;
+   position: fixed;
+  top: 0; left: 0; bottom: 0;
+   z-index: 100;
+}
+.logo{
+    display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 22px 20px;
+}
+.logo-text{
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 2px;
+}
+.nav {
+      flex: 1;
+      padding: 24px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 13px 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 600;
+      color: white;
+      transition: all .2s;
+      letter-spacing: .5px;
+      text-decoration: none;
+    }
+    .nav-item:hover {
+      background: rgba(0,201,200,.08);
+      color: rgb(15, 167, 167);
+    }
+
+    .nav-item.active {
+      background: cyan;
+      color: rgb(0, 14, 14);
+      box-shadow: 0 4px 20px rgba(0,201,200,.3);
+    }
+    .main {
+      margin-left: 260px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+     .topbar {
+      background: #111827;
+      border-bottom: 1px solid #1e2d44;
+      padding: 46px 64px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    .topbar h1{
+ font-family: 'Rajdhani', sans-serif;
+      font-size: 22px;
+   
+      letter-spacing: 2px;
+      color: white;
+     
+    }
+.conteudo{
+     padding: 28px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      flex: 1;
+}
+.grade-de-estatus{
+  display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+}
+.card-perigo{
+   background: #28405C;
+      border: 1px;
+      border-radius: 14px;
+      padding: 9px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+}
+.texto-card-perigo{
+    display: flex;
+      align-items: center;
+      justify-content:center ;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: white;
+}
+.valor-perigo{
+  display:flex;
+  justify-content: center;
+  color: red;
+  font-size: 32px;
+  align-items: center;
+  font-weight: 600;
+}
+.card-temp{
+   background: #378AAF;
+      border: 1px;
+      border-radius: 14px;
+      padding: 9px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+}
+.texto-card-temp{
+    display: flex;
+      align-items: center;
+      justify-content:center ;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: white;
+}
+.valor-temp-med{
+  display:flex;
+  justify-content: center;
+  color: rgb(31, 230, 31);
+  font-size: 32px;
+  align-items: center;
+  font-weight: 600;
+}
+.card-umidade{
+   background: #5586B9;
+      border: 1px;
+      border-radius: 14px;
+      padding: 9px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+}
+
+.texto-card-umidade{
+    display: flex;
+      align-items: center;
+      justify-content:center ;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: white;
+}
+.valor-umidade{
+  display:flex;
+  justify-content: center;
+  color: yellow;
+  font-size: 32px;
+  align-items: center;
+  font-weight: 500;
+}
+.card-funcionario{
+   background: #213445;
+      border: 1px;
+      border-radius: 14px;
+      padding: 9px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+}
+.texto-card-funcionario{
+    display: flex;
+      align-items: center;
+      justify-content:center ;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: white;
+}
+.valor-funcionario{
+  display:flex;
+  justify-content: center;
+  color: white;
+  font-size: 32px;
+  align-items: center;
+  font-weight: 600;
+}
+.filtros{
+  display: flex;
+  background: #EFEFF2;
+
+      border: 1px solid #EFEFF2 ;
+      border-radius: 14px;
+      padding: 16px 22px;
+      display: flex;
+     
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+}
+.filtro-grupo{
+  display:flex;
+ gap: 15px;
+  align-items: center;
+}
+.campo-do-filtro{
+  font-family: 'Exo 2', sans-serif;
+   color: #5f656d;
+    font-size: 19px;
+      font-weight: 600;
+   
+}
+.selecao-filtro, .input-filtro{
+  border-radius: 10px;
+  font-family: 'Exo 2', sans-serif;
+      font-size: 16px;
+      padding: 7px 12px;
+border: 1px rgb(224, 224, 224);
+      color: #5f656d;
+     
+}
+.lista-alertas {
+  display: flex;
+  flex-direction: column;
+background: white;
+  border-radius: 14px;
+  border: 1px solid #1e2d44;
+  overflow: hidden;
+    font-family: 'Exo 2', sans-serif;
+   color: #5f656d;
+}
+.lista-titulo{
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+    padding: 12px 16px;
+}
+
+.lista-header,
+.lista-linha {
+  display: flex;
+  align-items: center;
+}
+
+.lista-header span,
+.lista-linha span {
+  flex: 1; 
+  padding: 12px 16px;
+}
+
+.lista-header {
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #64748b;
+  background: #111827;
+}
+
+.lista-linha {
+  border-top: 1px solid #1e2d44;
+  font-size: 14px;
+  cursor: pointer;
+
+}
+
+
+
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.badge.verde   {
+   background: rgba(34,197,94,.15);  color: #22c55e; 
+  }
+.badge.amarelo {
+   background: rgba(245,158,11,.15); color: #f59e0b; 
+  }
+.badge.vermelho{ 
+  background: rgba(239,68,68,.15);  color: #ef4444; 
+}
+
+
+.hum {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.hum.verde   { 
+  background: rgba(34,197,94,.2);  color: #22c55e; 
+}
+.hum.amarelo { 
+  background: rgba(245,158,11,.2); color: #f59e0b; 
+}
+.hum.vermelho{ 
+  background: rgba(239,68,68,.2);  color: #ef4444; 
+}
