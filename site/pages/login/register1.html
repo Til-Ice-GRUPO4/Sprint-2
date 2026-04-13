@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CADASTRO</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/login_style.css">
+    <link rel="stylesheet" href="../../styles/login_style.css">
+    <script src="../../scripts/login_script.js"></script>
 </head>
 
 <body>
@@ -29,20 +30,20 @@
             <div class="campos-wrap">
                 <div class="campo">
                     <label>E-MAIL</label>
-                    <input type="email" placeholder="">
+                    <input type="email" id="ipt_email">
                 </div>
                 <div class="campo">
                     <label>SENHA</label>
-                    <input type="password" placeholder="">
+                    <input type="password" id="ipt_senha">
                 </div>
                 <div class="campo">
                     <label>CONFIRMAR SENHA</label>
-                    <input type="password" placeholder="">
+                    <input type="password" id="ipt_confirmar_senha">
                 </div>
             </div>
 
             <div class="login-bottom">
-                <button>CRIAR CONTA</button>
+                <button onclick="auth_register()">CRIAR CONTA</button>
             </div>
         </div>
     </div>
