@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Barra lateral da Dashboard */
+aside {
+    width: 25%;
+    background-color: #081C29;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.aside-container-top {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.aside-container-bottom {
+    margin-bottom: 2rem;
+}
+
+.aside-logo-container {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    padding: 1rem;
+
+    img {
+        width: 60px;
+    }
+    span {
+        font-weight: 900;
+    }
+}
+
+.aside-buttons-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.aside-button {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .5rem .75rem;
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+
+    .aside-button-icon-container {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        background-color: #0F5E7F;
+        background-size: 70%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .aside-button-text {
+        font-weight: 700;
+    }
+
+    .dashboard-btn { background-image: url(../images/icons/activity1.svg); }
+    .cadastrar-funcionario-btn { background-image: url(../images/icons/person-add1.svg); }
+    .registro-de-lotes-btn { background-image: url(../images/icons/group66.svg); }
+    .sair-btn { background-image: url(../images/icons/box-arrow-left1.svg); }
+}
+
+.aside-button:hover {
+    background-color: #061520;
+    text-decoration: underline;
+}
+
+/* Conteúdo da Dashboard */
+main {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.title-container {
+    background-color: #0D2333;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .title-text {
+        font-weight: 400;
+    }
+    span {
+        font-weight: 800;
+    }
+}

@@ -1,159 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dashstyle.css">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="../../styles/dashboard.css">
 </head>
 <body>
-    <div class="barra_lateral">
-        <div class="logo">
-            <img src="images/logo.png" alt="Logo" width="60px">
-               <span class="logo-text">TIL-ICE</span>
-        </div>
-        <div class="nav">
-            <a class="nav-item active" href="#">
-              <img src="Screenshot 2026-04-11 233059.png" alt="dash" width="30px">  
-      DashBoard
-    </a>
-    <a class="nav-item" href="#">
-              <img src="Screenshot 2026-04-11 233219.png" alt="user" width="30px">  
-      Cadastrar Funcionário
-    </a>
-    <a class="nav-item" href="#" style="margin-top:auto;">
-              <img src="Screenshot 2026-04-11 233229.png" alt="exit" width="30px">  
-      Sair
-    </a>
-        </div>
-    </div>
- <div class="main">
-        <div class="topbar">
-             <h1>Bem-vindo <span>*nome_usuario*</span></h1>
-        </div>
-
-        <div class="conteudo">
-
-    <div class="grade-de-estatus">
-        <div class="card-perigo">
-            <div class="texto-card-perigo">
-                <img src="images/Screenshot 2026-04-09 171249.png" alt="perigo" width="30px">  
-                Containers em alerta
+    <aside>
+        <div class="aside-container-top">
+            <div class="aside-logo-container">
+                <img src="../../images/logo1.png" alt="Logo">
+                <span>TIL-ICE</span>
             </div>
-                 <div class="valor-perigo">67</div>
-        </div>
-        <div class="card-umidade">
-            <div class="texto-card-umidade">
-                <img src="images/Screenshot 2026-04-09 183553.png" alt="umidade" width="20px">  
-                Umidade média
+            <div class="aside-buttons-wrap">
+                <div class="aside-button">
+                    <div class="aside-button-icon-container dashboard-btn"></div>
+                    <div class="aside-button-text">Dashboard</div>
+                </div>
+                <div class="aside-button">
+                    <div class="aside-button-icon-container cadastrar-funcionario-btn"></div>
+                    <div class="aside-button-text">Cadastrar Funcionário</div>
+                </div>
+                <div class="aside-button">
+                    <div class="aside-button-icon-container registro-de-lotes-btn"></div>
+                    <div class="aside-button-text">Registro de Lotes</div>
+                </div>
             </div>
-                 <div class="valor-umidade">30%</div>
         </div>
-        <div class="card-temp">
-            <div class="texto-card-temp">
-                <img src="images/Screenshot 2026-04-09 183710.png" alt="temperatura" width="15px">  
-                Temperatura média
+        <div class="aside-container-bottom">
+            <div class="aside-button">
+                <div class="aside-button-icon-container sair-btn"></div>
+                <div class="aside-button-text">Sair</div>
             </div>
-                 <div class="valor-temp-med">2.45</div>
         </div>
-        <div class="card-funcionario">
-            <div class="texto-card-funcionario">
-                <img src="images/Screenshot 2026-04-09 183724.png" alt="funcio" width="28px">  
-                Funcionarios
+    </aside>
+    <main>
+        <div class="title-container">
+            <h1 class="title-text">Bem-vindo <span>*nome_usuário*</span></h1>
+        </div>
+        <section>
+            <div class="kpis-wrap">
+                <div class="kpi-container">
+                    <div class="kip-text-container">
+                        <img src="" alt="Ícone">
+                        <span></span>
+                    </div>
+                    <div class="kpi-numero-indicador"></div>
+                </div>
+                <div class="kpi-container">
+                    <div class="kip-text-container">
+                        <img src="" alt="Ícone">
+                        <span></span>
+                    </div>
+                    <div class="kpi-numero-indicador"></div>
+                </div>
+                <div class="kpi-container">
+                    <div class="kip-text-container">
+                        <img src="" alt="Ícone">
+                        <span></span>
+                    </div>
+                    <div class="kpi-numero-indicador"></div>
+                </div>
+                <div class="kpi-container">
+                    <div class="kip-text-container">
+                        <img src="" alt="Ícone">
+                        <span></span>
+                    </div>
+                    <div class="kpi-numero-indicador"></div>
+                </div>
             </div>
-                 <div class="valor-funcionario">16</div>
-        </div>
-    </div>
-<div class="filtros">
-    <div class="filtro-grupo">
-        <span class="campo-do-filtro">Periodo:</span>
-        <select class="selecao-filtro" name="" id="">
-            <option >Últimos 30 dias</option>
-            <option >Últimos 7 dias</option>
-            <option >Últimas 24 horas</option>
-        </select>
-    </div>
-    <div class="filtro-grupo">
-        <span class="campo-do-filtro">Alerta:</span>
-        <select class="selecao-filtro" name="" id="">
-            <option >Todos</option>
-            <option >Umidade</option>
-            <option >Temperatura</option>
-        </select>
-    </div>
-    <div class="filtro-grupo">
-        <span class="campo-do-filtro">Container:</span>
-        <input class="input-filtro" type="text" placeholder="Digite o código de série">
-       
-    </div>
-</div>
-<div class="lista-alertas">
-  <div class="lista-titulo">
-<span>Alertas:</span>
-</div>
-  <!-- Cabeçalho -->
-  <div class="lista-header">
-    <span>Código de série</span>
-    <span>Transportadora</span>
-    <span>Temperatura</span>
-    <span>Umidade</span>
-    <span>Última Leitura</span>
-  </div>
-
-  <!-- Linhas -->
-  <div class="lista-linha">
-    <span>8424</span>
-    <span>Trans Fish</span>
-    <span><div class="badge verde">⚠ 1.6 C</div></span>
-    <span><div class="hum verde">88%</div></span>
-    <span>02-03-2026 22:29</span>
-  </div>
-
-  <div class="lista-linha">
-    <span>9823</span>
-    <span>Buslog</span>
-    <span><div class="badge vermelho">⚠ 9.6 C</div></span>
-    <span><div class="hum amarelo">58%</div></span>
-    <span>02-03-2026 22:29</span>
-  </div>
-
-  <div class="lista-linha">
-    <span>1245</span>
-    <span>Logística de Pescados</span>
-    <span><div class="badge amarelo">⚠ 4.6 C</div></span>
-    <span><div class="hum vermelho">18%</div></span>
-    <span>02-03-2026 22:29</span>
-  </div>
-
-  <div class="lista-linha">
-    <span>0942</span>
-    <span>MSC</span>
-    <span><div class="badge vermelho">⚠ 9.6 C</div></span>
-    <span><div class="hum amarelo">58%</div></span>
-    <span>02-03-2026 22:29</span>
-  </div>
-
-  <div class="lista-linha selecionado">
-    <span>0742</span>
-    <span>Til-Ice</span>
-    <span><div class="badge amarelo">⚠ 4.6 C</div></span>
-    <span><div class="hum vermelho">18%</div></span>
-    <span>02-03-2026 22:29</span>
-  </div>
-
-  <div class="lista-linha">
-    <span>0094</span>
-    <span>PescT</span>
-    <span><div class="badge verde">⚠ 1.6 C</div></span>
-    <span><div class="hum verde">88%</div></span>
-    <span>02-03-2026 22:29</span>
-  </div>
-
-</div>
-
-
-
-     </div>
-    </div>
+            <div class="alerts"></div>
+            <div class="charts-container"></div>
+        </section>
+    </main>
 </body>
 </html>
