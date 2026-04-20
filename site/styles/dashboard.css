@@ -83,6 +83,7 @@ aside {
     .cadastrar-funcionario-btn { background-image: url(../images/icons/person-add1.svg); }
     .registro-de-lotes-btn { background-image: url(../images/icons/group66.svg); }
     .sair-btn { background-image: url(../images/icons/box-arrow-left1.svg); }
+    .ver_funcionario-btn { background-image: url(../images/icons/persons.svg); }
 }
 
 .aside-button:hover {

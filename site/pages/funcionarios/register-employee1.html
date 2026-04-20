@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Cadastrar Funcionário</title>
+
     <link rel="stylesheet" href="../../styles/dashboard.css">
+    <link rel="stylesheet" href="../../styles/funcionario.css">
 </head>
 <body>
     <aside>
@@ -41,43 +43,38 @@
         </div>
     </aside>
     <main>
-        <div class="title-container">
-            <h1 class="title-text">Bem-vindo <span>*nome_usuário*</span></h1>
-        </div>
-        <section>
-            <div class="kpis-wrap">
-                <div class="kpi-container">
-                    <div class="kip-text-container">
-                        <img src="" alt="Ícone">
-                        <span></span>
+        <div class="container">
+            <h1>Cadastar Novo Funcionário</h1>
+            <div class="container-form">
+
+                <div class="progress-bar">
+                    <div class="progress-element progress-element-complete">
+                        <div class="progress-number">1</div>
+                        <div class="progress-text">Dados iniciais</div>
                     </div>
-                    <div class="kpi-numero-indicador"></div>
-                </div>
-                <div class="kpi-container">
-                    <div class="kip-text-container">
-                        <img src="" alt="Ícone">
-                        <span></span>
+                    <div class="progress-element progress-element-incomplete">
+                        <div class="progress-number">2</div>
+                        <div class="progress-text">Identificação</div>
+                    </div><div class="progress-element progress-element-incomplete">
+                        <div class="progress-number">3</div>
+                        <div class="progress-text">Senha</div>
                     </div>
-                    <div class="kpi-numero-indicador"></div>
                 </div>
-                <div class="kpi-container">
-                    <div class="kip-text-container">
-                        <img src="" alt="Ícone">
-                        <span></span>
-                    </div>
-                    <div class="kpi-numero-indicador"></div>
-                </div>
-                <div class="kpi-container">
-                    <div class="kip-text-container">
-                        <img src="" alt="Ícone">
-                        <span></span>
-                    </div>
-                    <div class="kpi-numero-indicador"></div>
-                </div>
+
+                <form action="">
+                    <label for="">Nome: </label>
+                    <input type="text" placeholder="Digite o nome do funcionario">
+
+                    <label for="">Email: </label>
+                    <input type="email" id="ipt_email" placeholder="Digite o email do funcionario">
+                </form>
+
+                <section class="section-buttons">
+                    <button class="cadastrar-botao">Cadastrar</button>
+                    <button class="proximo-botao" onclick="window.location.href='../funcionarios/register-employee2.html'">Próximo</button>
+                </section>
             </div>
-            <div class="alerts"></div>
-            <div class="charts-container"></div>
-        </section>
+        </div>
     </main>
 </body>
 </html>
