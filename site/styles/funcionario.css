@@ -11,9 +11,11 @@
 }
 
 /* Enfatizando em qual sessão o usuário está */
-.aside-button:nth-child(2){
+.current-session{
     background-color: #1AB8C4;
 }
+
+/* Estilização do arquivo register-employee */
 
 /* Alteração de cores de background e utilização do flex */
 main{
@@ -137,4 +139,133 @@ main .container .container-form{
 .container .container-form .section-buttons .proximo-botao{
     background-color: #1AB8C4;
     color: #FFF;
+}
+
+/* Estilização do arquivo see-employee.html */
+
+.container-see{
+    background-color: #FFF;
+    width: 1200px;
+    height: 750px;
+    border-radius: 20px;
+}
+
+/* Estilizando o título */
+.container-see h1{
+    padding: 20px;
+    color: #252C35;
+    background-color: #F3F7FA;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+/* Estilizado toda a sessão de busca de funcionário */
+.container-see .section-search{
+    padding: 20px;
+}
+
+.container-see .section-search p {
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.container-see  .section-search form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-see .section-search form input{
+    width: 160px;
+    border: 2px solid #081C29;
+    color: #000;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.container-see .section-search form button{
+    width: 130px;
+    background-color: #1AB8C4;
+    border: none;
+    color: #FFF;
+    border-radius: 20px;
+}
+
+/* Estilizando a lista de funcionários */
+thead, 
+tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+tbody {
+    display: block;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.section-list table thead .title-table th{
+    background-color: #F3F7FA;
+    color: #7C7C7C;
+    height: 70px;
+    text-align: center;
+}
+
+.section-list table tbody tr td{
+    color: #000;
+    font-size: 12px;
+    height: 50px;
+    text-align: center;
+}
+
+.section-list table .odd-registration{
+    background-color: #DFE2EF;
+}
+
+.section-list table .even-registration{
+    background-color: #EFEFF8;
+}
+
+/* Estilizando botões de ação */
+.section-buttons{
+    margin-top: 2rem;
+    width: 99%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.section-buttons .section-left{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-buttons button{
+    border: none;
+    width: 130px;
+    height: 35px;
+    border-radius: 10px;
+    color: #FFF;
+    background-color: #1AB8C4;
+    margin-top: 0.5rem;
+}
+
+.section-buttons .section-left .button,
+.section-buttons .section-right .button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section-buttons .section-left p,
+.section-buttons .section-right p{
+    width: 217px;
+    text-align: center;
+    color: #787878;
+}
+
+.section-buttons .section-right .disable-button button{
+    background-color: #C41A5E;
 }

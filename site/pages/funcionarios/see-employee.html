@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Funcionário</title>
+
+    <link rel="stylesheet" href="../../styles/dashboard.css">
+    <link rel="stylesheet" href="../../styles/funcionario.css">
+</head>
+<body>
+    <aside>
+        <div class="aside-container-top">
+            <div class="aside-logo-container">
+                <img src="../../images/logo1.png" alt="Logo">
+                <span>TIL-ICE</span>
+            </div>
+            <div class="aside-buttons-wrap">
+                <div class="aside-button" onclick="window.location.href='../dashboard/dashboard.html'">
+                    <div class="aside-button-icon-container dashboard-btn"></div>
+                    <div class="aside-button-text">Dashboard</div>
+                </div>
+                <div class="aside-button" onclick="window.location.href='../funcionarios/register-employee1.html'">
+                    <div class="aside-button-icon-container cadastrar-funcionario-btn"></div>
+                    <div class="aside-button-text">Cadastrar Funcionário</div>
+                </div>
+                <div class="aside-button">
+                    <div class="aside-button-icon-container registro-de-lotes-btn"></div>
+                    <div class="aside-button-text">Registro de Lotes</div>
+                </div>
+                <div class="aside-button current-session" onclick="window.location.href='../funcionarios/see-employee.html'">
+                    <div class="aside-button-icon-container ver_funcionario-btn"></div>
+                    <div class="aside-button-text">Ver Funcionários</div>
+                </div>
+            </div>
+        </div>
+        <div class="aside-container-bottom">
+            <div class="aside-button">
+                <div class="aside-button-icon-container sair-btn"></div>
+                <div class="aside-button-text">Sair</div>
+            </div>
+        </div>
+    </aside>
+    <main>
+        <div class="container-see">
+            <h1>Funcionários</h1>
+            
+            <section class="section-search">
+                <p>Busca usuário</p>
+                <form action="">
+                    <input type="text" placeholder="Nome">
+                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Cargo">
+                    <input type="text" placeholder="Status">
+                    <button>Buscar</button>
+                </form>
+            </section>
+
+            <section class="section-list">
+                <!-- Criando uma tabela -->
+                <table>
+                    <!-- Criando a parte do título da tabela -->
+                    <thead>
+                        <tr class="title-table">
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Cargo</th>
+                            <th>Status</th>
+                            <th>Admissão</th>
+                            <th>Remoção</th>
+                            <th>Selecionar</th>
+                        </tr>
+                    </thead>
+                    <!-- Adicionando novos registros na tabela -->
+                    <tbody>
+                        <tr class="odd-registration">
+                            <td>Nome do Funcionário</td>
+                            <td>email@email.com</td>
+                            <td>Dono</td>
+                            <td>Ativo</td>
+                            <td>02/03/2026</td>
+                            <td>../../....</td>
+                            <td>
+                                <input type="checkbox"> 
+                            </td>
+                        </tr>
+                        <tr class="even-registration">
+                            <td>Nome do Funcionário</td>
+                            <td>email@email.com</td>
+                            <td>Dono</td>
+                            <td>Ativo</td>
+                            <td>02/03/2026</td>
+                            <td>../../....</td>
+                            <td>
+                                <input type="checkbox"> 
+                            </td>
+                        </tr>
+                        <tr class="odd-registration">
+                            <td>Nome do Funcionário</td>
+                            <td>email@email.com</td>
+                            <td>Dono</td>
+                            <td>Ativo</td>
+                            <td>02/03/2026</td>
+                            <td>../../....</td>
+                            <td>
+                                <input type="checkbox"> 
+                            </td>
+                        </tr>
+                        <tr class="even-registration">
+                            <td>Nome do Funcionário</td>
+                            <td>email@email.com</td>
+                            <td>Dono</td>
+                            <td>Ativo</td>
+                            <td>02/03/2026</td>
+                            <td>../../....</td>
+                            <td>
+                                <input type="checkbox"> 
+                            </td>
+                        </tr>
+                        <tr class="odd-registration">
+                            <td>Nome do Funcionário</td>
+                            <td>email@email.com</td>
+                            <td>Dono</td>
+                            <td>Ativo</td>
+                            <td>02/03/2026</td>
+                            <td>../../....</td>
+                            <td>
+                                <input type="checkbox"> 
+                            </td>
+                        </tr>
+                        <tr class="even-registration">
+                            <td>Nome do Funcionário</td>
+                            <td>email@email.com</td>
+                            <td>Dono</td>
+                            <td>Ativo</td>
+                            <td>02/03/2026</td>
+                            <td>../../....</td>
+                            <td>
+                                <input type="checkbox"> 
+                            </td>
+                        </tr>
+                        <tr class="odd-registration">
+                            <td>Nome do Funcionário</td>
+                            <td>email@email.com</td>
+                            <td>Dono</td>
+                            <td>Ativo</td>
+                            <td>02/03/2026</td>
+                            <td>../../....</td>
+                            <td>
+                                <input type="checkbox"> 
+                            </td>
+                        </tr>
+                        <tr class="even-registration">
+                            <td>Nome do Funcionário</td>
+                            <td>email@email.com</td>
+                            <td>Dono</td>
+                            <td>Ativo</td>
+                            <td>02/03/2026</td>
+                            <td>../../....</td>
+                            <td>
+                                <input type="checkbox"> 
+                            </td>
+                        </tr>
+                        <tr class="odd-registration">
+                            <td>Nome do Funcionário</td>
+                            <td>email@email.com</td>
+                            <td>Dono</td>
+                            <td>Ativo</td>
+                            <td>02/03/2026</td>
+                            <td>../../....</td>
+                            <td>
+                                <input type="checkbox"> 
+                            </td>
+                        </tr>
+                        <tr class="even-registration">
+                            <td>Nome do Funcionário</td>
+                            <td>email@email.com</td>
+                            <td>Dono</td>
+                            <td>Ativo</td>
+                            <td>02/03/2026</td>
+                            <td>../../....</td>
+                            <td>
+                                <input type="checkbox"> 
+                            </td>
+                        </tr>
+                        <tr class="odd-registration">
+                            <td>Nome do Funcionário</td>
+                            <td>email@email.com</td>
+                            <td>Dono</td>
+                            <td>Ativo</td>
+                            <td>02/03/2026</td>
+                            <td>../../....</td>
+                            <td>
+                                <input type="checkbox"> 
+                            </td>
+                        </tr>
+                        <tr class="even-registration">
+                            <td>Nome do Funcionário</td>
+                            <td>email@email.com</td>
+                            <td>Dono</td>
+                            <td>Ativo</td>
+                            <td>02/03/2026</td>
+                            <td>../../....</td>
+                            <td>
+                                <input type="checkbox"> 
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <div class="section-buttons">
+                <div class="section-left">
+                    <div class="button promote-button">
+                        <p>Promover usuários selecionados</p>
+                        <button>Promover</button>
+                    </div>
+                    <div class="button demote-button">
+                        <p>Rebaixar usuários selecionados</p>
+                        <button>Rebaixar</button>
+                    </div>
+                </div>
+                <div class="section-right">
+                    <div class="button disable-button">
+                        <p>Desativar usuários selecionados</p>
+                        <button>Desativar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>
