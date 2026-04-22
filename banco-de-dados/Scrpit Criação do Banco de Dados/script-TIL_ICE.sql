@@ -22,6 +22,7 @@ CREATE TABLE usuario (
 	cpf CHAR(11) NOT NULL UNIQUE,
 	dt_cadastro_usuario DATETIME DEFAULT CURRENT_TIMESTAMP(),
 	adm TINYINT DEFAULT 0,
+    ativo TINYINT DEFAULT 0,
 	fk_empresa INT NOT NULL,
 	CONSTRAINT ctfkEmpresa FOREIGN KEY (fk_empresa) REFERENCES empresa(id_empresa)
 );
@@ -99,13 +100,13 @@ INSERT INTO empresa (nome_empresa, cnpj, codigo_convite) VALUES
     ('Brazilian Fish', '33628460000118', 'BRFISH-2024');
 
 -- 2. Inserindo registros na tabela 'usuario'
-INSERT INTO usuario (nome_usuario, email, nome_completo, senha, cpf, adm, fk_empresa) VALUES
-    ('chefe1', 'chefe1@empresa.com', 'Chefe 1', '@Senha242', '12345678901', 1, 1),
-    ('chefe2', 'chefe2@empresa.com', 'Chefe 2', '@Senha243', '12345678902', 1, 1),
-    ('funcionario1', 'funcionario1@empresa.com', 'Funcionario 1', '@Senha241', '12345678903', 0, 1),
-    ('funcionario2', 'funcionario2@empresa.com', 'Funcionario 2', '@Senha244', '12345678904', 0, 1),
-    ('funcionario3', 'funcionario3@empresa.com', 'Funcionario 3', '@Senha267', '12345678907', 0, 2),
-    ('funcionario4', 'funcionario4@empresa.com', 'Funcionario 4', '@Senha2',   '12345678909', 0, 2);
+INSERT INTO usuario (nome_usuario, email, nome_completo, senha, cpf, adm, ativo, fk_empresa) VALUES
+    ('chefe1', 'chefe1@empresa.com', 'Chefe 1', '@Senha242', '12345678901', 1, 1, 1),
+    ('chefe2', 'chefe2@empresa.com', 'Chefe 2', '@Senha243', '12345678902', 1, 1, 1),
+    ('funcionario1', 'funcionario1@empresa.com', 'Funcionario 1', '@Senha241', '12345678903', 0, 1, 1),
+    ('funcionario2', 'funcionario2@empresa.com', 'Funcionario 2', '@Senha244', '12345678904', 0, 1, 1),
+    ('funcionario3', 'funcionario3@empresa.com', 'Funcionario 3', '@Senha267', '12345678907', 0, 1, 2),
+    ('funcionario4', 'funcionario4@empresa.com', 'Funcionario 4', '@Senha2',   '12345678909', 0, 1, 2);
 
 -- 3. Inserindo registros na tabela 'lote'
 INSERT INTO lote (codigo_lote, dt_transporte_inicio, dt_transporte_final, peso_total_tonelada) VALUES
