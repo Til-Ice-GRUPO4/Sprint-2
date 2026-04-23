@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="../../styles/dashboard.css">
+    <link rel="stylesheet" href="../../styles/modal.css">
 </head>
 <body>
     <aside>
@@ -14,7 +15,7 @@
                 <span>TIL-ICE</span>
             </div>
             <div class="aside-buttons-wrap">
-                <div class="aside-button .current-session" onclick="window.location.href='../dashboard/dashboard.html'">
+                <div class="aside-button current-session" onclick="window.location.href='../dashboard/dashboard.html'">
                     <div class="aside-button-icon-container dashboard-btn"></div>
                     <div class="aside-button-text">Dashboard</div>
                 </div>
@@ -34,13 +35,27 @@
             </div>
         </div>
         <div class="aside-container-bottom">
-            <div class="aside-button">
+            <div class="aside-button open-modal-exit">
                 <div class="aside-button-icon-container sair-btn"></div>
                 <div class="aside-button-text">Sair</div>
             </div>
         </div>
     </aside>
+
+    <!-- Criando o esqueleto do modal -->
+    <dialog class="modal modal-exit">
+        <div class="container-modal-exit">
+            <h1>Confirmar Saída</h1>
+            <p>Tem certeza que deseja sair da seseão?</p>
+            <div class="section-buttons">
+                <button class="cancel-button close-modal-exit">Cancelar</button>
+                <button class="exit-button" onclick="window.location.href='../../index.html'">Sair</button>
+            </div>
+        </div>
+    </dialog>
+
     <main>
+
         <div class="title-container">
             <h1 class="title-text">Bem-vindo <span>*nome_usuário*</span></h1>
         </div>
@@ -79,5 +94,8 @@
             <div class="charts-container"></div>
         </section>
     </main>
+
+    <script src="../../scripts/model_script.js"></script>
+
 </body>
 </html>

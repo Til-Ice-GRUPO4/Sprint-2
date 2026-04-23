@@ -6,7 +6,9 @@
     <title>Cadastrar Funcionário</title>
 
     <link rel="stylesheet" href="../../styles/dashboard.css">
-    <link rel="stylesheet" href="../../styles/funcionario.css">
+    <link rel="stylesheet" href="../../styles/employee.css">
+    <link rel="stylesheet" href="../../styles/modal.css">
+
 </head>
 <body>
     <aside>
@@ -36,12 +38,25 @@
             </div>
         </div>
         <div class="aside-container-bottom">
-            <div class="aside-button">
+            <div class="aside-button open-modal-exit">
                 <div class="aside-button-icon-container sair-btn"></div>
                 <div class="aside-button-text">Sair</div>
             </div>
         </div>
     </aside>
+
+    <!-- Criando o esqueleto do modal -->
+    <dialog class="modal modal-exit">
+        <div class="container-modal-exit">
+            <h1>Confirmar Saída</h1>
+            <p>Tem certeza que deseja sair da seseão?</p>
+            <div class="section-buttons">
+                <button class="cancel-button close-modal-exit">Cancelar</button>
+                <button class="exit-button" onclick="window.location.href='../../index.html'">Sair</button>
+            </div>
+        </div>
+    </dialog>
+
     <main>
         <div class="container">
             <h1>Cadastar Novo Funcionário</h1>
@@ -78,5 +93,8 @@
             </div>
         </div>
     </main>
+
+    <script src="../../scripts/model_script.js"></script>
+
 </body>
 </html>
