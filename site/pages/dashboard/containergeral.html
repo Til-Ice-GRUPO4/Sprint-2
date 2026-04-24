@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="C:\Users\marcu\Sprint-2\site\styles\containergeral.css">
+</head>
+
+<body>
+
+  <div class="aplicacao-inteira">
+
+    <div class="barra-lateral">
+      <div class="area-logotipo">
+        <div class="icone-logotipo"></div>
+        <div class="texto-logotipo">TIL-ICE</div>
+      </div>
+
+      <div class="menu-navegacao">
+        <div class="item-menu item-agora">
+          <div class="icone-menu dashboard"></div>
+          <div class="texto-menu">DashBoard</div>
+        </div>
+        <div class="item-menu">
+          <div class="icone-menu cadastrar-funcionario"></div>
+          <div class="texto-menu">Cadastrar Funcionario</div>
+        </div>
+        <div class="item-menu">
+          <div class="icone-menu registro-lotes"></div>
+          <div class="texto-menu">Registro de Lotes</div>
+        </div>
+        <div class="item-menu">
+          <div class="icone-menu ver-funcionarios"></div>
+          <div class="texto-menu">Ver Funcionários</div>
+        </div>
+      </div>
+
+      <div class="menu-rodape">
+        <div class="item-menu sair">
+          <div class="icone-menu sair"></div>
+          <div class="texto-menu">Sair</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="area-conteudo">
+
+      <div class="cabecalho-topo">
+        <div class="mensagem-boas-vindas">Bem-vindo *nome_usuario*</div>
+        <div class="nome-empresa">Empresa: XXXX</div>
+      </div>
+
+      <div class="painel-principal">
+
+        <div class="linha-cartoes">
+          <div class="cartao crt-container">
+            <div class="titulo-cartao">Container Registrados:</div>
+            <div class="conteudo-cartao">
+              <div class="icone-container"></div>
+              <div class="numero-cartao">6</div>
+            </div>
+          </div>
+
+          <div class="cartao crt-temp">
+            <div class="titulo-cartao">Containers em Alerta (temperatura)</div>
+            <div class="conteudo-cartao">
+              <div class="icone-termometro"></div>
+              <div class="numero-cartao">5</div>
+            </div>
+          </div>
+
+          <div class="cartao crt-umd">
+            <div class="titulo-cartao">Containers em Alerta (umidade)</div>
+            <div class="conteudo-cartao">
+              <div class="icone-gota"></div>
+              <div class="numero-cartao">3</div>
+            </div>
+          </div>
+
+          <div class="cartao crt-ambos">
+            <div class="titulo-cartao">Containers em Alerta (temperatura e umidade)</div>
+            <div class="conteudo-cartao">
+              <div class="icone-alerta"></div>
+              <div class="numero-cartao">5</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="caixa-aviso">
+          <div class="texto-aviso">Selecione um container para acessar o monitoramento detalhado de temperatura,
+            umidade e gráficos de desempenho completo</div>
+        </div>
+
+        <div class="barra-filtros">
+          <div class="grupo-filtro">
+            <div class="rotulo-filtro">Periodo:</div>
+            <div class="campo">Ultimos 30 dias</div>
+          </div>
+          <div class="grupo-filtro">
+            <div class="rotulo-filtro">Alerta:</div>
+            <div class="campo">Todos</div>
+          </div>
+          <div class="grupo-filtro">
+            <div class="rotulo-filtro">Container</div>
+            <div class="campo">Digite o código de série</div>
+          </div>
+        </div>
+
+        <div class="area-tabela">
+          <div class="titulo-tabela">Alertas:</div>
+
+          <div class="cabecalho-tabela linha-cinza">
+            <div class="coluna-tabela">Código de série</div>
+            <div class="coluna-tabela">Containers</div>
+            <div class="coluna-tabela">Última Captura de Temperatura</div>
+            <div class="coluna-tabela">Última Captura de Umidade</div>
+            <div class="coluna-tabela">Data da Leitura</div>
+          </div>
+
+          <div class="linha-tabela linha-branca">
+            <div class="celula-tabela">0942</div>
+            <div class="celula-tabela">Container Com Pro...</div>
+            <div class="celula-tabela">
+              <div class="etiqueta-alerta etq-vermelho">
+                <div class="alert-icon"></div>9.6 C</div>
+            </div>
+            <div class="celula-tabela">
+              <div class="etiqueta-alerta etq-vermelho">18%</div>
+            </div>
+            <div class="celula-tabela">02-03-2026 22:29</div>
+          </div>
+
+          <div class="linha-tabela linha-cinza">
+            <div class="celula-tabela">9823</div>
+            <div class="celula-tabela">Container velho</div>
+            <div class="celula-tabela">
+              <div class="etiqueta-alerta etq-vermelho">
+                <div class="alert-icon"></div>9.6 C</div>
+            </div>
+            <div class="celula-tabela">
+              <div class="etiqueta-alerta etq-amarelo">58%</div>
+            </div>
+            <div class="celula-tabela">02-03-2026 22:29</div>
+          </div>
+
+          <div class="linha-tabela linha-branca">
+            <div class="celula-tabela">1245</div>
+            <div class="celula-tabela">Container Novo</div>
+            <div class="celula-tabela">
+              <div class="etiqueta-alerta etq-amarelo">
+                <div class="alert-icon"></div>4.6 C</div>
+            </div>
+            <div class="celula-tabela">
+              <div class="etiqueta-alerta etq-vermelho">18%</div>
+            </div>
+            <div class="celula-tabela">02-03-2026 22:29</div>
+          </div>
+
+          <div class="linha-tabela linha-cinza">
+            <div class="celula-tabela">0742</div>
+            <div class="celula-tabela">Container A</div>
+            <div class="celula-tabela">
+              <div class="etiqueta-alerta etq-amarelo">
+                <div class="alert-icon"></div>4.6 C</div>
+            </div>
+            <div class="celula-tabela">
+              <div class="etiqueta-alerta etq-vermelho">18%</div>
+            </div>
+            <div class="celula-tabela">02-03-2026 22:29</div>
+          </div>
+
+          <div class="linha-tabela linha-branca">
+            <div class="celula-tabela">8424</div>
+            <div class="celula-tabela">Container B</div>
+            <div class="celula-tabela">
+              <div class="etiqueta-alerta etq-amarelo">
+                <div class="alert-icon"></div>4.6 C</div>
+            </div>
+            <div class="celula-tabela">
+              <div class="etiqueta-alerta etq-verde">88%</div>
+            </div>
+            <div class="celula-tabela">02-03-2026 22:29</div>
+          </div>
+
+          <div class="linha-tabela linha-cinza">
+            <div class="celula-tabela">0094</div>
+            <div class="celula-tabela">Container C</div>
+            <div class="celula-tabela">
+              <div class="etiqueta-alerta etq-verde">
+                <div class="alert-icon"></div>1.6 C</div>
+            </div>
+            <div class="celula-tabela">
+              <div class="etiqueta-alerta etq-verde">88%</div>
+            </div>
+            <div class="celula-tabela">02-03-2026 22:29</div>
+          </div>
+
+          <div class="rodape-tabela-pagina">
+            <div class="botao-pagina texto"> Anterior</div>
+            <div class="botao-pagina pg-agora">1</div>
+            <div class="botao-pagina">2</div>
+            <div class="botao-pagina">3</div>
+            <div class="botao-pagina texto">Próximo</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

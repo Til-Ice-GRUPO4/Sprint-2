@@ -1,0 +1,346 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: white;
+}
+
+.aplicacao-inteira {
+    display: flex;
+    height: 100%;
+    font-weight: bold;
+}
+
+
+
+.barra-lateral {
+    width: 300px;
+    background-color: #081C29;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* padding: 20px; */
+}
+
+.area-logotipo {
+    display: flex;
+    margin-bottom: 100px;
+    padding: 20px;
+}
+
+.icone-logotipo {
+    background-image: url(../styles/imgs/tilicelogo.png);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.texto-logotipo {
+    display: flex;
+    align-items: center;
+}
+
+.menu-navegacao {
+    /* padding: 20px; */
+    /* gap: 100%; */
+    margin-bottom: 150%;
+}
+
+.texto-menu {
+    display: flex;
+    align-items: center;
+}
+
+.item-menu {
+    padding: 15px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.item-agora {
+    background-color: #2ec4b6;
+}
+
+.item-menu {
+    display: flex;
+}
+
+.menu-rodape {
+    display: flex;
+    align-items: end;
+    /* justify-content: end; */
+}
+
+.item-menu .sair {
+    background-image: url(../styles/imgs/iconsair.png);
+    background-color: #0F5E7F;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.dashboard {
+    background-image: url(../styles/imgs/icondash.png);
+    background-color: #0F5E7F;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.cadastrar-funcionario {
+    background-image: url(../styles/imgs/iconaddpessoa.png);
+    background-color: #0F5E7F;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.registro-lotes {
+    background-image: url(../styles/imgs/iconcontainer.png);
+    background-color: #0F5E7F;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.ver-funcionarios {
+    background-image: url(../styles/imgs/iconpessoas.png);
+    background-color: #0F5E7F;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+
+.area-conteudo {
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecalho-topo {
+    background-color: #0D2333;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.painel-principal {
+    background-color: #B8B8B9;
+    padding: 30px;
+    color: #333;
+}
+
+
+
+.linha-cartoes {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.cartao {
+    flex: 1;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+}
+
+.conteudo-cartao {
+    display: flex;
+}
+
+.icone-container {
+    background-image: url(../styles/imgs/iconcontainer.png);
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.icone-termometro {
+    background-image: url(../styles/imgs/icontermometro.png);
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.icone-gota {
+    background-image: url(../styles/imgs/icongota.png);
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.icone-alerta {
+    background-image: url(../styles/imgs/iconalerta.png);
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.crt-container {
+    background-color: #1AB8C4;
+}
+
+.crt-temp {
+    background-color: #AF4637;
+}
+
+.crt-umd {
+    background-color: #AF8A37;
+}
+
+.crt-ambos {
+    background-color: #AF4637;
+}
+
+.numero-cartao {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.caixa-aviso {
+    background-color: #DFE2EF;
+    border-radius: 10px;
+    border: solid;
+    border-color: #378AAF;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.texto-aviso {
+    font-weight: bold;
+}
+
+
+
+.barra-filtros {
+    background-color: #EFEFF2;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    /* gap: 20px; */
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grupo-filtro {
+    display: flex;
+    gap: 10px;
+}
+
+.rotulo-filtro {
+    display: flex;
+    align-items: center;
+}
+
+.campo {
+    background-color: #E1E4EA;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.area-tabela {
+    background-color: #EFEFF2;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column  ;
+    justify-content: space-between;
+}
+
+.titulo-tabela {
+    /* margin: 10px; */
+    padding: 10px;
+    font-weight: bold;
+}
+
+.cabecalho-tabela,
+.linha-tabela {
+    display: flex;
+    padding: 10px 0;
+    text-align: center;
+    align-items: center;
+    /* margin-left: 20px; */
+}
+
+.linha-cinza {
+    background-color: #DFE2EF;
+}
+
+.coluna-tabela,
+.celula-tabela {
+    flex: 1;
+    font-size: 14px;
+}
+
+
+
+.etiqueta-alerta {
+    padding: 5px;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    width: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.etq-verde {
+    background-color: #12A212;
+}
+
+.etq-amarelo {
+    background-color: #FFDE21;
+}
+
+.etq-vermelho {
+    background-color: #FF2C2C;
+}
+
+.alert-icon {
+    background-image: url(../styles/imgs/iconalerta.png);
+    background-size: cover;
+    display: flex;
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.rodape-tabela-pagina {
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+    margin: 15px;
+}
+
+.botao-pagina {
+    padding: 5px;
+    background-color: #8A8D95;
+    color: #E1E4E9;
+    border-radius: 4px;
+}
+
+.pg-agora {
+    background-color: #E1E4E9;
+    border: solid;
+    border-color: #8A8D95;
+    color: #8A8D95;
+}
