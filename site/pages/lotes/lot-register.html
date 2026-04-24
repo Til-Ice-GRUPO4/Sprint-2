@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><lot-reg>TIL-ICE lot-reg</title>
+
+    <link rel="stylesheet" href="../../styles/dashboard.css">
+    <link rel="stylesheet" href="../../styles/lot_register.css">
+    <link rel="stylesheet" href="../../styles/modal.css">
+</head>
+
+<body>
+
+    <aside>
+        <div class="aside-container-top">
+            <div class="aside-logo-container">
+                <img src="../../images/logo1.png" alt="Logo">
+                <span>TIL-ICE</span>
+            </div>
+            <div class="aside-buttons-wrap">
+                <div class="aside-button" onclick="window.location.href='../dashboard/dashboard.html'">
+                    <div class="aside-button-icon-container dashboard-btn"></div>
+                    <div class="aside-button-text">Dashboard</div>
+                </div>
+                <!-- Discutir com o grupo se a transição de telas será a partir do atributo onclick ou será a partir de outra maneira -->
+                <div class="aside-button" onclick="window.location.href='../funcionarios/register-employee1.html'">
+                    <div class="aside-button-icon-container cadastrar-funcionario-btn"></div>
+                    <div class="aside-button-text">Cadastrar Funcionário</div>
+                </div>
+                <div class="aside-button current-session">
+                    <div class="aside-button-icon-container registro-de-lotes-btn"></div>
+                    <div class="aside-button-text">Registro de Lotes</div>
+                </div>
+                <div class="aside-button" onclick="window.location.href='../funcionarios/see-employee.html'">
+                    <div class="aside-button-icon-container ver_funcionario-btn"></div>
+                    <div class="aside-button-text">Ver Funcionários</div>
+                </div>
+            </div>
+        </div>
+        <div class="aside-container-bottom">
+            <div class="aside-button open-modal-exit">
+                <div class="aside-button-icon-container sair-btn"></div>
+                <div class="aside-button-text">Sair</div>
+            </div>
+        </div>
+    </aside>
+
+    <dialog class="modal modal-exit">
+        <div class="container-modal-exit">
+            <h1>Confirmar Saída</h1>
+            <p>Tem certeza que deseja sair da seseão?</p>
+            <div class="section-buttons">
+                <button class="cancel-button close-modal-exit">Cancelar</button>
+                <button class="exit-button" onclick="window.location.href='../../index.html'">Sair</button>
+            </div>
+        </div>
+    </dialog>
+
+    <main>
+        <div class="container">
+            <h1>Containeres</h1>
+            <!-- Criando tabela para exibir containeres. -->
+            <table>
+                <tbody>
+                    <tr class="odd-registration">
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td>
+                            <div class="Container_info">
+                                Container com problema
+                            </div>
+                        </td>
+                        <td>
+                            <button>Iniciar</button>
+                        </td>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+</body>
+
+<script src="../../scripts/model_script.js"></script>
+
+</html>

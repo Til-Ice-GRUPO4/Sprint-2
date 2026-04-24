@@ -1,0 +1,63 @@
+/* Reset dos elementos da página (de acordo com as outras) */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Archivo Black", sans-serif;
+}
+
+/* Alterando Fundo do Site e estilizando página de acordo com as outras*/
+main {
+    background-color: #B8B8B9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .container {
+    background-color: #F3F7FA;
+    width: 985px;
+    height: 800px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+main .container h1 {
+    color: #252C35;
+    font-size: 40px;
+    margin-left: 1rem;
+}
+
+main .container .container-form {
+    height: 80%;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* Adicionando elemento de scroll para tabelas de lotes */
+
+tbody {
+    display: block;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.Container_info {
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    width: 30rem;
+    height: 94px;
+    border-radius: 35px;
+    border: 4px solid #081C29;
+    color: black;
+}
