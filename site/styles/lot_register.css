@@ -20,7 +20,7 @@ main {
 
 main .container {
     background-color: #F3F7FA;
-    width: 985px;
+    width: 80%;
     height: 800px;
     border-radius: 20px;
     padding: 20px;
@@ -47,10 +47,31 @@ main .container .container-form {
 
 tbody {
     display: block;
-    height: 300px;
+    height: 450px;
+}
+
+/* Definindo Estilo da Tabela Padrão */
+
+table {
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    border: #081C29 solid 4px;
+    padding: 1rem;
     overflow-y: scroll;
 }
 
+.Centralizador table td {
+    margin: 0%;
+}
+
+.Centralizador {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Adicionando Elementos da tabela */
 .Container_info {
     margin: 2rem;
     display: flex;
