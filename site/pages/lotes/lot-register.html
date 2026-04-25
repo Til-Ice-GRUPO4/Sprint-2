@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><lot-reg>TIL-ICE lot-reg</title>
+    <title>TIL-ICE lot-reg</title>
 
     <link rel="stylesheet" href="../../styles/dashboard.css">
     <link rel="stylesheet" href="../../styles/lot_register.css">
@@ -153,6 +153,43 @@
                 </div>
             </div>
         </div>
+        <dialog class="modal modal-start">
+            <div class="container-modal-start">
+                <h1>Confirmar Início</h1>
+                <div class="option">
+                    <input type="radio" id="" name="option_hour">
+                    <label for="">Início com data atual</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="" name="option_hour">
+                    <label for="" class="text-light">Início com data anterior: </label>
+                    <input type="datetime" id="" placeholder="DD/MM/AAAA HH:mm" class="text-light">
+                </div>
+                <div class="section-buttons">
+                    <button class="cancel-button cancel-modal-start">Cancelar</button>
+                    <button class="exit-button close-modal-start">Sair</button>
+                </div>
+            </div>
+        </dialog>
+
+        <dialog class="modal modal-end">
+            <div class="container-modal-end">
+                <h1>Confirmar Fim</h1>
+                <div class="option">
+                    <input type="radio" id="" name="option_hour">
+                    <label for="">Fim com data atual</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="" name="option_hour">
+                    <label for="" class="text-light">Fim com data anterior: </label>
+                    <input type="datetime" id="" placeholder="DD/MM/AAAA HH:mm" class="text-light">
+                </div>
+                <div class="section-buttons">
+                    <button class="cancel-button cancel-modal-end">Cancelar</button>
+                    <button class="exit-button close-modal-end">Sair</button>
+                </div>
+            </div>
+        </dialog>
 
     </main>
 </body>
@@ -163,33 +200,80 @@
     // Fazer apenas com que o botao Iniciar DAQUELA linha não apareça ao clicar, e o botao Finalizar DAQUELA linha apareça, e vice versa Por Enquanto Desconsiderando as Checkboxes.
     let BotaoLinhaIniciar = document.querySelectorAll('.btn.iniciar');
     let BotaoLinhaFinalizar = document.querySelectorAll('.btn.finalizar');
+
+    let modalStart = document.querySelector(".modal-start");
+    let closeModalStart = document.querySelector(".close-modal-start");
+    let cancelModalStart = document.querySelector(".cancel-modal-start");
+
+    let modalEnd = document.querySelector(".modal-end");
+    let closeModalEnd = document.querySelector(".close-modal-end");
+    let cancelModalEnd = document.querySelector(".cancel-modal-end");
+
+    let linhaAtiva = null;
+
     function Iniciar() {
         for (let i = 0; i < BotaoLinhaIniciar.length; i++) {
             // Verificando se o botao daquela linha foi clicado
             let botaoClicado = event.target;
             if (BotaoLinhaIniciar[i] === botaoClicado) {
+                linhaAtiva = i;
+                
                 if (BotaoLinhaIniciar[i].style.display === 'flex') {
                     BotaoLinhaIniciar[i].style.display = 'none';
                     BotaoLinhaFinalizar[i].style.display = 'flex';
+
+                    modalStart.showModal();
                 }
                 break;
             }
         }
     }
+    cancelModalStart.addEventListener("click", (e) => {
+        if (linhaAtiva !== null) {
+            BotaoLinhaIniciar[linhaAtiva].style.display = 'flex';
+            BotaoLinhaFinalizar[linhaAtiva].style.display = 'none';
+        }
+        modalStart.close();
+        linhaAtiva = null; 
+    });
+
+    closeModalStart.addEventListener("click", (e) => {
+        modalStart.close();
+        linhaAtiva = null;
+    });
 
     function Finalizar() {
         for (let i = 0; i < BotaoLinhaFinalizar.length; i++) {
             // Verificando se o botao daquela linha foi clicado
             let botaoClicado = event.target;
             if (BotaoLinhaFinalizar[i] === botaoClicado) {
+                linhaAtiva = i;
                 if (BotaoLinhaFinalizar[i].style.display === 'flex') {
+
                     BotaoLinhaFinalizar[i].style.display = 'none';
                     BotaoLinhaIniciar[i].style.display = 'flex';
+
+                    modalEnd.showModal();
                 }
                 break;
             }
         }
     }
+
+    cancelModalEnd.addEventListener("click", () => {
+        if (linhaAtiva !== null) {
+            BotaoLinhaFinalizar[linhaAtiva].style.display = 'flex';
+            BotaoLinhaIniciar[linhaAtiva].style.display = 'none';
+        }
+        modalEnd.close();
+        linhaAtiva = null; 
+    });
+
+    closeModalEnd.addEventListener("click", () => {
+        modalEnd.close();
+        linhaAtiva = null;
+    });
+
 </script>
 
 </html>

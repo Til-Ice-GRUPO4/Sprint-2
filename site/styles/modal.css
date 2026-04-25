@@ -91,3 +91,123 @@
 
 .modal-disable .container-modal-disable .section-buttons .cancel-button { background-color: #6A717A; }
 .modal-disable .container-modal-disable .section-buttons .disable-button { background-color: #1AB8C4; }
+
+/* Estilizando os modals da tela "registro container" */
+
+/* Estilizando botão "Iniciar" */
+.modal-start{
+    width: 600px;
+    height: 300px;
+}
+
+.modal-start .container-modal-start {
+    margin-top: 1.5rem;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.modal-start .container-modal-start label{
+   font-size: 24px;
+}
+
+/* Alterando o tamanho do input do tipo radio */
+.modal-start .container-modal-start input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.5rem  ;
+}
+
+.modal-start .container-modal-start .option .text-light{
+    color: #949DA5;
+}
+
+.modal-start .container-modal-start input[type="datetime"]{
+    font-size: 24px;
+    width: 275px;
+    height: 20px;
+    border: none;
+}
+
+.modal-start .container-modal-start .section-buttons {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 20px;
+}
+
+.modal-start .container-modal-start .section-buttons button{
+    width: 130px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 20pxs;
+    color: #F3F7FA;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal-start .container-modal-start .section-buttons .cancel-button { background-color: #6A717A; }
+.modal-start .container-modal-start .section-buttons .exit-button { background-color: #1AB8C4; }
+
+/* Estilizando botão "Finalizar" */
+.modal-end{
+    width: 600px;
+    height: 300px;
+}
+
+.modal-end .container-modal-end {
+    margin-top: 1.5rem;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.modal-end .container-modal-end label{
+   font-size: 24px;
+}
+
+/* Alterando o tamanho do input do tipo radio */
+.modal-end .container-modal-end input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.5rem  ;
+}
+
+.modal-end .container-modal-end .option .text-light{
+    color: #949DA5;
+}
+
+.modal-end .container-modal-end input[type="datetime"]{
+    font-size: 24px;
+    width: 275px;
+    height: 20px;
+    border: none;
+}
+
+.modal-end .container-modal-end .section-buttons {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 20px;
+}
+
+.modal-end .container-modal-end .section-buttons button{
+    width: 130px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 20pxs;
+    color: #F3F7FA;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal-end .container-modal-end .section-buttons .cancel-button { background-color: #6A717A; }
+.modal-end .container-modal-end .section-buttons .exit-button { background-color: #1AB8C4; }
