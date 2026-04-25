@@ -60,7 +60,7 @@
 
     <main>
         <div class="container">
-            <h1>Containeres</h1>
+            <h1>Containers</h1>
             <!-- Criando tabela para exibir containeres. -->
             <div class="Centralizador">
 
@@ -68,7 +68,7 @@
                     <tbody>
                         <tr>
                             <td>
-                                <input type="checkbox">
+                                <input type="checkbox" class="pointer" onchange="AtivarBotao()">
                             </td>
                             <td>
                                 <div class="Container_info">
@@ -76,37 +76,81 @@
                                 </div>
                             </td>
                             <td>
-                                <button>Iniciar</button>
+                                <button onclick="Iniciar()" class="btn iniciar" style="display: flex;">Iniciar</button>
+                                <button onclick="Finalizar()" class="btn finalizar"
+                                    style="display: none;">Finalizar</button>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input type="checkbox">
+                                <input type="checkbox" class="pointer" onchange="AtivarBotao()">
                             </td>
                             <td>
                                 <div class="Container_info">
-                                    Container com problema
+                                    Container Velho
                                 </div>
                             </td>
                             <td>
-                                <button>Iniciar</button>
+                                <button onclick="Iniciar()" class="btn iniciar" style="display: flex;">Iniciar</button>
+                                <button onclick="Finalizar()" class="btn finalizar"
+                                    style="display: none;">Finalizar</button>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input type="checkbox">
+                                <input type="checkbox" class="pointer" onchange="AtivarBotao()">
                             </td>
                             <td>
                                 <div class="Container_info">
-                                    Container com problema
+                                    Container A
                                 </div>
                             </td>
                             <td>
-                                <button>Iniciar</button>
+                                <button onclick="Iniciar()" class="btn iniciar" style="display: flex;">Iniciar</button>
+                                <button onclick="Finalizar()" class="btn finalizar"
+                                    style="display: none;">Finalizar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" class="pointer" onchange="AtivarBotao()">
+                            </td>
+                            <td>
+                                <div class="Container_info">
+                                    Container B
+                                </div>
+                            </td>
+                            <td>
+                                <button onclick="Iniciar()" class="btn iniciar" style="display: flex;">Iniciar</button>
+                                <button onclick="Finalizar()" class="btn finalizar"
+                                    style="display: none;">Finalizar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" class="pointer" onchange="AtivarBotao()">
+                            </td>
+                            <td>
+                                <div class="Container_info">
+                                    Container C
+                                </div>
+                            </td>
+                            <td>
+                                <button onclick="Iniciar()" class="btn iniciar" style="display: flex;">Iniciar</button>
+                                <button onclick="Finalizar()" class="btn finalizar"
+                                    style="display: none;">Finalizar</button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div class="Centralizador">
+                <div class="BtnOutside">
+                    <button class="btn iniciar" onclick="Iniciar()" id="IniciarGeral"
+                        style="display: flex;">Iniciar</button>
+                    <button class="btn finalizar" onclick="Finalizar()" id="FinalizarGeral"
+                        style="display: none;">Finalizar</button>
+                </div>
             </div>
         </div>
 
@@ -114,5 +158,38 @@
 </body>
 
 <script src="../../scripts/model_script.js"></script>
+
+<script>
+    // Fazer apenas com que o botao Iniciar DAQUELA linha não apareça ao clicar, e o botao Finalizar DAQUELA linha apareça, e vice versa Por Enquanto Desconsiderando as Checkboxes.
+    let BotaoLinhaIniciar = document.querySelectorAll('.btn.iniciar');
+    let BotaoLinhaFinalizar = document.querySelectorAll('.btn.finalizar');
+    function Iniciar() {
+        for (let i = 0; i < BotaoLinhaIniciar.length; i++) {
+            // Verificando se o botao daquela linha foi clicado
+            let botaoClicado = event.target;
+            if (BotaoLinhaIniciar[i] === botaoClicado) {
+                if (BotaoLinhaIniciar[i].style.display === 'flex') {
+                    BotaoLinhaIniciar[i].style.display = 'none';
+                    BotaoLinhaFinalizar[i].style.display = 'flex';
+                }
+                break;
+            }
+        }
+    }
+
+    function Finalizar() {
+        for (let i = 0; i < BotaoLinhaFinalizar.length; i++) {
+            // Verificando se o botao daquela linha foi clicado
+            let botaoClicado = event.target;
+            if (BotaoLinhaFinalizar[i] === botaoClicado) {
+                if (BotaoLinhaFinalizar[i].style.display === 'flex') {
+                    BotaoLinhaFinalizar[i].style.display = 'none';
+                    BotaoLinhaIniciar[i].style.display = 'flex';
+                }
+                break;
+            }
+        }
+    }
+</script>
 
 </html>
