@@ -271,3 +271,12 @@ tbody {
 .section-buttons .section-right .disable-button button{
     background-color: #C41A5E;
 }
+
+@media screen and (max-width: 1366px) {
+    .container-see{
+        background-color: #FFF;
+        width: 800px;
+        height: 700px;
+        border-radius: 20px;
+    }
+}
