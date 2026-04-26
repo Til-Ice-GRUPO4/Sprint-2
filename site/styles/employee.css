@@ -272,11 +272,15 @@ tbody {
     background-color: #C41A5E;
 }
 
+/* Estilização para visualização de telas com no máximo 1366 pixels de largura */
 @media screen and (max-width: 1366px) {
     .container-see{
-        background-color: #FFF;
         width: 800px;
         height: 700px;
-        border-radius: 20px;
+    }
+
+    main .container{
+        width: 800px;
+        height: 600px;
     }
 }

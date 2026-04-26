@@ -132,3 +132,14 @@ td {
     margin-top: 2rem;
     width: 708px
 }
+
+/* Estilização para visualização de telas com no máximo 1366 pixels de largura */
+@media screen and (max-width: 1366px) {
+    main .container {
+        width: 80%;
+        height: 680px;
+    }
+    .Container_info {
+        margin: 0.5rem;
+    }
+}
