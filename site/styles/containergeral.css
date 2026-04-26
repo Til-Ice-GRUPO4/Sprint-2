@@ -44,7 +44,7 @@ body {
 .menu-navegacao {
     /* padding: 20px; */
     /* gap: 100%; */
-    margin-bottom: 150%;
+    margin-bottom: 190%;
 }
 
 .texto-menu {
@@ -75,7 +75,11 @@ body {
 .item-menu .sair {
     background-image: url(../styles/imgs/iconsair.png);
     background-color: #0F5E7F;
-    background-size: cover;
+    /* codigo do antigo dashboard */
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -85,17 +89,27 @@ body {
 .dashboard {
     background-image: url(../styles/imgs/icondash.png);
     background-color: #0F5E7F;
-    background-size: cover;
+
+    /* codigo do antigo dashboard */
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+/* background-size: cover; */
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-right: 10px;
+
 }
 
 .cadastrar-funcionario {
     background-image: url(../styles/imgs/iconaddpessoa.png);
     background-color: #0F5E7F;
-    background-size: cover;
+    /* codigo do antigo dashboard */
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -105,7 +119,10 @@ body {
 .registro-lotes {
     background-image: url(../styles/imgs/iconcontainer.png);
     background-color: #0F5E7F;
-    background-size: cover;
+    /* codigo do antigo dashboard */
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -115,7 +132,10 @@ body {
 .ver-funcionarios {
     background-image: url(../styles/imgs/iconpessoas.png);
     background-color: #0F5E7F;
-    background-size: cover;
+    /* codigo do antigo dashboard */
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -156,41 +176,56 @@ body {
     border-radius: 15px;
     color: white;
     text-align: center;
+    margin: 30px;
 }
 
 .conteudo-cartao {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .icone-container {
     background-image: url(../styles/imgs/iconcontainer.png);
-    width: 60px;
-    height: 60px;
-    background-size: cover;
+    width: 80px;
+    height: 80px;
+    /* codigo do antigo dashboard */
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
     margin-right: 10px;
 }
 
 .icone-termometro {
     background-image: url(../styles/imgs/icontermometro.png);
-    width: 60px;
-    height: 60px;
-    background-size: cover;
+    width: 80px;
+    height: 80px;
+    /* codigo do antigo dashboard */
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
     margin-right: 10px;
 }
 
 .icone-gota {
     background-image: url(../styles/imgs/icongota.png);
-    width: 60px;
-    height: 60px;
-    background-size: cover;
+    width: 80px;
+    height: 80px;
+    /* codigo do antigo dashboard */
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
     margin-right: 10px;
 }
 
 .icone-alerta {
     background-image: url(../styles/imgs/iconalerta.png);
-    width: 60px;
-    height: 60px;
-    background-size: cover;
+    width: 80px;
+    height: 80px;
+    /* codigo do antigo dashboard */
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
     margin-right: 10px;
 }
 
@@ -222,10 +257,13 @@ body {
     border-color: #378AAF;
     padding: 30px;
     margin-bottom: 20px;
+    text-align: center;    
 }
 
 .texto-aviso {
     font-weight: bold;
+    font-size: large;
+    color: black;
 }
 
 
@@ -237,22 +275,25 @@ body {
     display: flex;
     /* gap: 20px; */
     margin-bottom: 20px;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
 }
 
 .grupo-filtro {
     display: flex;
     gap: 10px;
+    margin-right: 50px;
 }
 
 .rotulo-filtro {
     display: flex;
     align-items: center;
+    margin-right: 10px;
 }
 
 .campo {
     background-color: #E1E4EA;
+    color: #8F95A3;
     border-radius: 10px;
     padding: 10px;
 }
@@ -274,7 +315,7 @@ body {
 .cabecalho-tabela,
 .linha-tabela {
     display: flex;
-    padding: 10px 0;
+    padding: 10px;
     text-align: center;
     align-items: center;
     /* margin-left: 20px; */
@@ -336,6 +377,14 @@ body {
     background-color: #8A8D95;
     color: #E1E4E9;
     border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+}
+
+.texto {
+    width: 60px;
 }
 
 .pg-agora {
