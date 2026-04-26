@@ -1,216 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
-  <link rel="stylesheet" href="../../styles/containergeral.css"
+  <title>Container Geral</title>
+  <link rel="stylesheet" href="../../styles/dashboard.css">
+  <link rel="stylesheet" href="../../styles/containergeral.css">
+</head>
 
 <body>
-
-  <div class="aplicacao-inteira">
-
-    <div class="barra-lateral">
-      <div class="area-logotipo">
-        <div class="icone-logotipo"></div>
-        <div class="texto-logotipo">TIL-ICE</div>
+  <aside>
+    <div class="aside-container-top">
+      <div class="aside-logo-container">
+        <img src="../../images/logo1.png" alt="Logo">
+        <span>TIL-ICE</span>
       </div>
-
-      <div class="menu-navegacao">
-        <div class="item-menu item-agora">
-          <div class="icone-menu dashboard"></div>
-          <div class="texto-menu">DashBoard</div>
+      <div class="aside-buttons-wrap">
+        <div class="aside-button current-session" onclick="window.location.href='../dashboard/dashboard.html'">
+          <div class="aside-button-icon-container dashboard-btn"></div>
+          <div class="aside-button-text">Dashboard</div>
         </div>
-        <div class="item-menu">
-          <div class="icone-menu cadastrar-funcionario"></div>
-          <div class="texto-menu">Cadastrar Funcionario</div>
+        <!-- Discutir com o grupo se a transição de telas será a partir do atributo onclick ou será a partir de outra maneira -->
+        <div class="aside-button" onclick="window.location.href='../funcionarios/register-employee1.html'">
+          <div class="aside-button-icon-container cadastrar-funcionario-btn"></div>
+          <div class="aside-button-text">Cadastrar Funcionário</div>
         </div>
-        <div class="item-menu">
-          <div class="icone-menu registro-lotes"></div>
-          <div class="texto-menu">Registro de Lotes</div>
+        <div class="aside-button" ; onclick="window.location.href='../lotes/lot-register.html'">
+          <div class="aside-button-icon-container registro-de-lotes-btn"></div>
+          <div class="aside-button-text">Registro de Lotes</div>
         </div>
-        <div class="item-menu">
-          <div class="icone-menu ver-funcionarios"></div>
-          <div class="texto-menu">Ver Funcionários</div>
-        </div>
-      </div>
-
-      <div class="menu-rodape">
-        <div class="item-menu sair">
-          <div class="icone-menu sair"></div>
-          <div class="texto-menu">Sair</div>
+        <div class="aside-button" onclick="window.location.href='../funcionarios/see-employee.html'">
+          <div class="aside-button-icon-container ver_funcionario-btn"></div>
+          <div class="aside-button-text">Ver Funcionários</div>
         </div>
       </div>
     </div>
-
-    <div class="area-conteudo">
-
-      <div class="cabecalho-topo">
-        <div class="mensagem-boas-vindas">Bem-vindo nome_usuario</div>
-        <div class="nome-empresa">Empresa: XXXX</div>
-      </div>
-
-      <div class="painel-principal">
-
-        <div class="linha-cartoes">
-          <div class="cartao crt-container">
-            <div class="titulo-cartao">Container Registrados:</div>
-            <div class="conteudo-cartao">
-              <div class="icone-container"></div>
-              <div class="numero-cartao">6</div>
-            </div>
-          </div>
-
-          <div class="cartao crt-temp">
-            <div class="titulo-cartao">Containers em Alerta (temperatura)</div>
-            <div class="conteudo-cartao">
-              <div class="icone-termometro"></div>
-              <div class="numero-cartao">5</div>
-            </div>
-          </div>
-
-          <div class="cartao crt-umd">
-            <div class="titulo-cartao">Containers em Alerta (umidade)</div>
-            <div class="conteudo-cartao">
-              <div class="icone-gota"></div>
-              <div class="numero-cartao">3</div>
-            </div>
-          </div>
-
-          <div class="cartao crt-ambos">
-            <div class="titulo-cartao">Containers em Alerta (temperatura e umidade)</div>
-            <div class="conteudo-cartao">
-              <div class="icone-alerta"></div>
-              <div class="numero-cartao">5</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="caixa-aviso">
-          <div class="texto-aviso">Selecione um container para acessar o monitoramento detalhado de temperatura,
-            umidade e gráficos de desempenho completo</div>
-        </div>
-
-        <div class="barra-filtros">
-          <div class="grupo-filtro">
-            <div class="rotulo-filtro">Periodo:</div>
-            <div class="campo">Ultimos 30 dias</div>
-          </div>
-          <div class="grupo-filtro">
-            <div class="rotulo-filtro">Alerta:</div>
-            <div class="campo">Todos</div>
-          </div>
-          <div class="grupo-filtro">
-            <div class="rotulo-filtro">Container</div>
-            <div class="campo">Digite o código de série</div>
-          </div>
-        </div>
-
-        <div class="area-tabela">
-          <div class="titulo-tabela">Alertas:</div>
-
-          <div class="cabecalho-tabela linha-cinza">
-            <div class="coluna-tabela">Código de série</div>
-            <div class="coluna-tabela">Containers</div>
-            <div class="coluna-tabela">Última Captura de Temperatura</div>
-            <div class="coluna-tabela">Última Captura de Umidade</div>
-            <div class="coluna-tabela">Data da Leitura</div>
-          </div>
-
-          <div class="linha-tabela linha-branca">
-            <div class="celula-tabela">0942</div>
-            <div class="celula-tabela">Container Com Pro...</div>
-            <div class="celula-tabela">
-              <div class="etiqueta-alerta etq-vermelho">
-                <div class="alert-icon"></div>9.6 C</div>
-            </div>
-            <div class="celula-tabela">
-              <div class="etiqueta-alerta etq-vermelho">18%</div>
-            </div>
-            <div class="celula-tabela">02-03-2026 22:29</div>
-          </div>
-
-          <div class="linha-tabela linha-cinza">
-            <div class="celula-tabela">9823</div>
-            <div class="celula-tabela">Container velho</div>
-            <div class="celula-tabela">
-              <div class="etiqueta-alerta etq-vermelho">
-                <div class="alert-icon"></div>9.6 C</div>
-            </div>
-            <div class="celula-tabela">
-              <div class="etiqueta-alerta etq-amarelo">58%</div>
-            </div>
-            <div class="celula-tabela">02-03-2026 22:29</div>
-          </div>
-
-          <div class="linha-tabela linha-branca">
-            <div class="celula-tabela">1245</div>
-            <div class="celula-tabela">Container Novo</div>
-            <div class="celula-tabela">
-              <div class="etiqueta-alerta etq-amarelo">
-                <div class="alert-icon"></div>4.6 C</div>
-            </div>
-            <div class="celula-tabela">
-              <div class="etiqueta-alerta etq-vermelho">18%</div>
-            </div>
-            <div class="celula-tabela">02-03-2026 22:29</div>
-          </div>
-
-          <div class="linha-tabela linha-cinza">
-            <div class="celula-tabela">0742</div>
-            <div class="celula-tabela">Container A</div>
-            <div class="celula-tabela">
-              <div class="etiqueta-alerta etq-amarelo">
-                <div class="alert-icon"></div>4.6 C</div>
-            </div>
-            <div class="celula-tabela">
-              <div class="etiqueta-alerta etq-vermelho">18%</div>
-            </div>
-            <div class="celula-tabela">02-03-2026 22:29</div>
-          </div>
-
-          <div class="linha-tabela linha-branca">
-            <div class="celula-tabela">8424</div>
-            <div class="celula-tabela">Container B</div>
-            <div class="celula-tabela">
-              <div class="etiqueta-alerta etq-amarelo">
-                <div class="alert-icon"></div>4.6 C</div>
-            </div>
-            <div class="celula-tabela">
-              <div class="etiqueta-alerta etq-verde">88%</div>
-            </div>
-            <div class="celula-tabela">02-03-2026 22:29</div>
-          </div>
-
-          <div class="linha-tabela linha-cinza">
-            <div class="celula-tabela">0094</div>
-            <div class="celula-tabela">Container C</div>
-            <div class="celula-tabela">
-              <div class="etiqueta-alerta etq-verde">
-                <div class="alert-icon"></div>1.6 C</div>
-            </div>
-            <div class="celula-tabela">
-              <div class="etiqueta-alerta etq-verde">88%</div>
-            </div>
-            <div class="celula-tabela">02-03-2026 22:29</div>
-          </div>
-
-          <div class="rodape-tabela-pagina">
-            <div class="botao-pagina texto"> Anterior</div>
-            <div class="botao-pagina pg-agora">1</div>
-            <div class="botao-pagina">2</div>
-            <div class="botao-pagina">3</div>
-            <div class="botao-pagina texto">Próximo</div>
-          </div>
-
-        </div>
-
+    <div class="aside-container-bottom">
+      <div class="aside-button open-modal-exit">
+        <div class="aside-button-icon-container sair-btn"></div>
+        <div class="aside-button-text">Sair</div>
       </div>
     </div>
+  </aside>
 
-  </div>
+  <!-- Criando o esqueleto do modal -->
+  <dialog class="modal modal-exit">
+    <div class="container-modal-exit">
+      <h1>Confirmar Saída</h1>
+      <p>Tem certeza que deseja sair da seseão?</p>
+      <div class="section-buttons">
+        <button class="cancel-button close-modal-exit">Cancelar</button>
+        <button class="exit-button" onclick="window.location.href='../../index.html'">Sair</button>
+      </div>
+    </div>
+  </dialog>
+
+  <main>
+
+    <div class="title-container">
+      <h1 class="title-text">Bem-vindo <span>*nome_usuário*</span></h1>
+    </div>
+
+    <section class="conteudo">
+
+      <div class="cards-topo">
+
+        <div class="card azul">
+
+          <p>Container Registrados:</p>
+          <div class="info-card">
+            <img src="../../styles/imgs/iconcontainer.png" class="icone-card">
+            <h2>6</h2>
+          </div>
+        </div>
+
+        <div class="card vermelho">
+          <p>Contêineres em Alerta (temperatura)</p>
+          <div class="info-card">
+            <img src="../../styles/imgs/icontermometro.png" class="icone-card">
+            <h2>5</h2>
+          </div>
+        </div>
+
+        <div class="card amarelo">
+          <p>Contêineres em Alerta (umidade)</p>
+          <div class="info-card">
+            <img src="../../styles/imgs/icongota.png" class="icone-card">
+            <h2>3</h2>
+          </div>
+        </div>
+
+        <div class="card vermelho">
+          <p>Contêineres em Alerta (temperatura e umidade)</p>
+          <div class="info-card">
+            <img src="../../styles/imgs/iconalerta.png" class="icone-card">
+            <h2>5</h2>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="aviso-container">
+        <p>
+          Selecione um contêiner para
+          visualizar o monitoramento detalhado de temperatura,
+          umidade e gráficos de desempenho.
+        </p>
+      </div>
+
+      <div class="filtros-container">
+
+        <label>Período:</label>
+        <select>
+          <option>Últimos 30 dias</option>
+        </select>
+
+        <label>Alerta:</label>
+        <select>
+          <option>Todos</option>
+        </select>
+
+        <label>Container</label>
+        <input type="text" placeholder="Digite o código de série">
+
+      </div>
+
+      <div class="tabela-container">
+
+        <h3>Alertas:</h3>
+
+        <table>
+          <tr class="efeito-zebra">
+            <th>Código de série</th>
+            <th>Contêineres</th>
+            <th>Última Captura de Temperatura</th>
+            <th>Última Captura de Umidade</th>
+            <th>Data da Leitura</th>
+          </tr>
+
+          <tr class="efeito-branco">
+            <td>0942</td>
+            <td>Container Com Pro...</td>
+            <td><span class="badge vermelho">⚠ 9.6 C</span></td>
+            <td><span class="badge vermelho">18%</span></td>
+            <td>02-03-2026 22:29</td>
+          </tr>
+
+          <tr class="efeito-zebra">
+            <td>9823</td>
+            <td>Container velho</td>
+            <td><span class="badge vermelho">⚠ 9.6 C</span></td>
+            <td><span class="badge amarelo">58%</span></td>
+            <td>02-03-2026 22:29</td>
+          </tr>
+
+          <tr class="efeito-branco">
+            <td>1245</td>
+            <td>Container Novo</td>
+            <td><span class="badge amarelo">⚠ 4.3 C</span></td>
+            <td><span class="badge vermelho">18%</span></td>
+            <td>02-03-2026 22:29</td>
+          </tr>
+
+          <tr class="efeito-zebra">
+            <td>0742</td>
+            <td>Container B</td>
+            <td><span class="badge amarelo">⚠ 4.3 C</span></td>
+            <td><span class="badge vermelho">18%</span></td>
+            <td>02-03-2026 22:29</td>
+          </tr>
+
+          <tr class="efeito-branco">
+            <td>8424</td>
+            <td>Container A</td>
+            <td><span class="badge amarelo">⚠ 4.3 C</span></td>
+            <td><span class="badge verde">88%</span></td>
+            <td>02-03-2026 22:29</td>
+          </tr>
+
+          <tr class="efeito-zebra">
+            <td>0094</td>
+            <td>Container C</td>
+            <td><span class="badge verde">⚠ 1.6 C</span></td>
+            <td><span class="badge verde">88%</span></td>
+            <td>02-03-2026 22:29</td>
+          </tr>
+        </table>
+        <div class="paginacao">
+
+          <span class="texto-pagina">&lt; Anterior</span>
+
+          <button class="pagina ativa">1</button>
+          <button class="pagina">2</button>
+          <button class="pagina">3</button>
+
+          <button class="proximo">Próximo</button>
+
+        </div>
+
+      </div>
+
+
+    </section>
+
+  </main>
+
+  <script src="../../scripts/model_script.js"></script>
+
 </body>
 
 </html>

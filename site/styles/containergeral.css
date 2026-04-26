@@ -1,395 +1,324 @@
-body {
-    margin: 0;
-    font-family: sans-serif;
-    color: white;
-}
+/*
+   Início
+*/
 
-.aplicacao-inteira {
-    display: flex;
-    height: 100%;
-    font-weight: bold;
-}
-
-
-
-.barra-lateral {
-    width: 300px;
-    background-color: #081C29;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
-    /* padding: 20px; */
-}
-
-.area-logotipo {
-    display: flex;
-    margin-bottom: 100px;
-    padding: 20px;
-}
-
-.icone-logotipo {
-    background-image: url(../styles/imgs/tilicelogo.png);
-    background-size: cover;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.texto-logotipo {
-    display: flex;
-    align-items: center;
-}
-
-.menu-navegacao {
-    /* padding: 20px; */
-    /* gap: 100%; */
-    margin-bottom: 190%;
-}
-
-.texto-menu {
-    display: flex;
-    align-items: center;
-}
-
-.item-menu {
-    padding: 15px;
-    margin-bottom: 5px;
-    cursor: pointer;
-}
-
-.item-agora {
-    background-color: #2ec4b6;
-}
-
-.item-menu {
-    display: flex;
-}
-
-.menu-rodape {
-    display: flex;
-    align-items: end;
-    /* justify-content: end; */
-}
-
-.item-menu .sair {
-    background-image: url(../styles/imgs/iconsair.png);
-    background-color: #0F5E7F;
-    /* codigo do antigo dashboard */
-    background-size: 70%;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.dashboard {
-    background-image: url(../styles/imgs/icondash.png);
-    background-color: #0F5E7F;
-
-    /* codigo do antigo dashboard */
-    background-size: 70%;
-    background-position: center;
-    background-repeat: no-repeat;
-
-/* background-size: cover; */
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-
-}
-
-.cadastrar-funcionario {
-    background-image: url(../styles/imgs/iconaddpessoa.png);
-    background-color: #0F5E7F;
-    /* codigo do antigo dashboard */
-    background-size: 70%;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.registro-lotes {
-    background-image: url(../styles/imgs/iconcontainer.png);
-    background-color: #0F5E7F;
-    /* codigo do antigo dashboard */
-    background-size: 70%;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.ver-funcionarios {
-    background-image: url(../styles/imgs/iconpessoas.png);
-    background-color: #0F5E7F;
-    /* codigo do antigo dashboard */
-    background-size: 70%;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-
-
-.area-conteudo {
-    display: flex;
-    flex-direction: column;
-}
-
-.cabecalho-topo {
-    background-color: #0D2333;
-    padding: 20px;
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.painel-principal {
+.conteudo {
     background-color: #B8B8B9;
-    padding: 30px;
-    color: #333;
+    height: calc(100vh - 90px);
+    padding: 15px 25px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 
+/*
+   CARDS SUPERIORES:
+   COTAINER REGISTRADOS
+   CONTEINER EM ALERTA (temperatura)
+   CONTEINER EM ALERTA (umidade)
+   CONTEINER em ALERTA (temperatura e umidade)
+*/
 
-.linha-cartoes {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.cartao {
-    flex: 1;
-    padding: 20px;
-    border-radius: 15px;
-    color: white;
-    text-align: center;
-    margin: 30px;
-}
-
-.conteudo-cartao {
+.cards-topo {
     display: flex;
     justify-content: center;
+    gap: 25px;
+    margin-top: 5px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 175px;
+    height: 105px;
+    border-radius: 12px;
+    padding: 10px;
+    color: white;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 
-.icone-container {
-    background-image: url(../styles/imgs/iconcontainer.png);
-    width: 80px;
-    height: 80px;
-    /* codigo do antigo dashboard */
-    background-size: 70%;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-right: 10px;
+.card p {
+    margin: 0;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
 }
 
-.icone-termometro {
-    background-image: url(../styles/imgs/icontermometro.png);
-    width: 80px;
-    height: 80px;
-    /* codigo do antigo dashboard */
-    background-size: 70%;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-right: 10px;
+.info-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 8px;
 }
 
-.icone-gota {
-    background-image: url(../styles/imgs/icongota.png);
-    width: 80px;
-    height: 80px;
-    /* codigo do antigo dashboard */
-    background-size: 70%;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-right: 10px;
+.icone-card {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
 }
 
-.icone-alerta {
-    background-image: url(../styles/imgs/iconalerta.png);
-    width: 80px;
-    height: 80px;
-    /* codigo do antigo dashboard */
-    background-size: 70%;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-right: 10px;
+.info-card h2 {
+    margin: 0;
+    font-size: 34px;
+    line-height: 1;
 }
 
-.crt-container {
+.azul {
     background-color: #1AB8C4;
 }
 
-.crt-temp {
+.vermelho {
     background-color: #AF4637;
 }
 
-.crt-umd {
+.amarelo {
     background-color: #AF8A37;
 }
 
-.crt-ambos {
-    background-color: #AF4637;
-}
 
-.numero-cartao {
-    font-size: 50px;
-    font-weight: bold;
-}
+/* 
+   AVISO CENTRAL
+*/
 
-.caixa-aviso {
-    background-color: #DFE2EF;
-    border-radius: 10px;
-    border: solid;
-    border-color: #378AAF;
-    padding: 30px;
-    margin-bottom: 20px;
-    text-align: center;    
-}
+.aviso-container {
+    width: 620px;
+    max-width: 92%;
+    height: 55px;
+    margin: 20px auto 15px auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
 
-.texto-aviso {
-    font-weight: bold;
-    font-size: large;
-    color: black;
-}
+    background: #dfe4f2;
+    border: 3px solid #378AAF;
+    border-radius: 15px;
 
-
-
-.barra-filtros {
-    background-color: #EFEFF2;
-    padding: 10px;
-    border-radius: 10px;
     display: flex;
-    /* gap: 20px; */
-    margin-bottom: 20px;
-    justify-content: left;
-    align-items: center;
-}
-
-.grupo-filtro {
-    display: flex;
-    gap: 10px;
-    margin-right: 50px;
-}
-
-.rotulo-filtro {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-}
-
-.campo {
-    background-color: #E1E4EA;
-    color: #8F95A3;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.area-tabela {
-    background-color: #EFEFF2;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column  ;
-    justify-content: space-between;
-}
-
-.titulo-tabela {
-    /* margin: 10px; */
-    padding: 10px;
-    font-weight: bold;
-}
-
-.cabecalho-tabela,
-.linha-tabela {
-    display: flex;
-    padding: 10px;
-    text-align: center;
-    align-items: center;
-    /* margin-left: 20px; */
-}
-
-.linha-cinza {
-    background-color: #DFE2EF;
-}
-
-.coluna-tabela,
-.celula-tabela {
-    flex: 1;
-    font-size: 14px;
-}
-
-
-
-.etiqueta-alerta {
-    padding: 5px;
-    border-radius: 20px;
-    color: white;
-    display: flex;
-    width: 60px;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+
+    text-align: center;
 }
 
-.etq-verde {
-    background-color: #12A212;
+.aviso-container p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: #222222;
+    line-height: 1.3;
 }
 
-.etq-amarelo {
-    background-color: #FFDE21;
+
+/* 
+   FILTROS:
+   Período (Últimos 30 dias)
+   Alerta (Todos)
+   Container ( "Digite o código de série" )
+*/
+
+.filtros-container {
+    width: 92%;
+    height: 38px;
+    margin: 12px auto;
+    padding: 0 18px;
+    box-sizing: border-box;
+
+    background: #EFEFF2;
+    border-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.etq-vermelho {
+.filtros-container label {
+    font-size: 15px;
+    font-weight: bold;
+    color: #7C7C7C;
+}
+
+.filtros-container select,
+.filtros-container input {
+    height: 28px;
+    padding: 0 10px;
+
+    border: none;
+    border-radius: 6px;
+    outline: none;
+
+    background: #E1E4EA;
+    font-size: 15px;
+}
+
+.filtros-container select {
+    width: 200px;
+}
+
+.filtros-container input {
+    width: 180px;
+}
+
+
+/*
+    TABELA DE ALERTAS:
+    Código de série
+    Conteineres
+    Última Captura de Temperatura
+    Última Captura de Umidade
+    Data da Leitura
+
+    TH (Table Header) = cabeçalho
+    TD (Table Data) = dados
+
+    Utilizados para estilizar elementos da tabela
+    sem necessidade de criar classes extras.
+*/
+
+.tabela-container {
+    width: 92%;
+    margin: 12px auto 0 auto;
+    padding-top: 10px;
+    box-sizing: border-box;
+
+    background-color: #EFEFF8;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabela-container h3 {
+    margin: 0;
+    padding: 0 14px 10px 14px;
+
+    font-size: 18px;
+    font-weight: bold;
+    color: #2f3b52;
+}
+
+table {
+    width: 100%;
+    min-width: 700px;
+
+    background: white;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 7px;
+    font-size: 15px;
+    color: #545862;
+    text-align: center;
+    white-space: nowrap;
+}
+
+td {
+    padding: 6px;
+    font-size: 15px;
+    color: #6d6d6d;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    border-bottom: 1px solid #eee;
+}
+
+
+/*
+   BADGES DE STATUS
+   É como se fosse uma etiqueta.
+   Aqui estão as cores dos alertas dos nossos ALERTAS
+*/
+
+.badge {
+    display: inline-block;
+    min-width: 155px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    box-sizing: border-box;
+
+    color: #edeef3;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.badge.vermelho {
     background-color: #FF2C2C;
 }
 
-.alert-icon {
-    background-image: url(../styles/imgs/iconalerta.png);
-    background-size: cover;
-    display: flex;
-    width: 20px;
-    height: 20px;
+.badge.amarelo {
+    background-color: #d6b80c;
+}
+
+.badge.verde {
+    background-color: #12A212;
 }
 
 
+/*
+   PAGINAÇÃO
+*/
 
-.rodape-tabela-pagina {
-    display: flex;
-    justify-content: end;
-    gap: 5px;
-    margin: 15px;
-}
+.paginacao {
+    min-width: 700px;
+    height: 38px;
+    padding-right: 40px;
+    box-sizing: border-box;
 
-.botao-pagina {
-    padding: 5px;
-    background-color: #8A8D95;
-    color: #E1E4E9;
-    border-radius: 4px;
+    background-color: #d9deec;
+    border-top: 1px solid #b6bbc6;
+
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: center;
-    width: 30px;
+    gap: 6px;
 }
 
-.texto {
-    width: 60px;
+.texto-pagina {
+    margin-right: 8px;
+
+    font-size: 11px;
+    color: #8a8d95;
+    font-weight: bold;
 }
 
-.pg-agora {
-    background-color: #E1E4E9;
-    border: solid;
-    border-color: #8A8D95;
-    color: #8A8D95;
+.pagina,
+.proximo {
+    height: 24px;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    background: #8d929c;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.pagina {
+    width: 24px;
+}
+
+.pagina.ativa {
+    background: #e6e9f0;
+    color: #7b7f88;
+    border: 1px solid #9ca1aa;
+}
+
+.proximo {
+    padding: 0 12px;
+}
+
+/* arrumando os alertas para ficar duas cores (cinza e branco), semelhante a zebra*/
+
+.efeito-zebra{
+    background-color: #DFE2EF;
+}
+
+.efeito-branco{
+    background: #EFEFF8;
 }
