@@ -106,13 +106,157 @@ main {
     background-color: #0D2333;
     height: 20%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    /* align-items: center; */
     justify-content: center;
+    padding: 0 1.5rem;
 
     .title-text {
-        font-weight: 400;
+        font-weight: 600;
     }
     span {
         font-weight: 800;
     }
+}
+
+section {
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* ---> DASHBOARD */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+}
+
+.dashboard-container-top {
+    display: flex;
+    width: 100%;
+}
+
+.red-kpi {
+    background-color: #FF2C2C;
+}
+.blue-kpi {
+    background-color: #1AB8C4;
+}
+.yellow-kpi {
+    background-color: #FFDE21;
+}
+
+/* STATUS */
+.status-wrap {
+    display: flex;
+    gap: 1rem;
+}
+
+.kpi-container {
+    display: flex;
+    flex-direction: column;
+    padding: .2rem 1rem;
+    width: 14rem;
+    height: 7rem;
+    align-items: center;
+}
+
+.kip-text-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    span {
+        text-align: center;
+        width: 100%;
+        font-weight: 400;
+        font-size: .9rem;
+    }
+}
+
+.kpi-numero-indicador {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 200%;
+    text-align: center;
+    font-weight: 800;
+}
+
+/* KPIS */
+.dashboard-container-mid {
+    display: flex;
+    height: min-content;
+}
+
+.kpis-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* CHARTS */
+.charts-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%;
+}
+
+.chart-container {
+    width: 100%;
+    height: 50%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.chart-title {
+    width: 100%;
+    color: #335176;
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+.chart {
+    height: 100%;
+    width: 80%;
+}
+
+/* BOTÕES */
+.dashboard-container-bottom {
+    width: 100%;
+}
+
+.buttons-wrap {
+    width: 100%;
+    display: flex;
+    gap: 10rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.dashboard-button {
+    width: 130px;
+    height: 52px;
+    border: 0;
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.remove-button {
+    background-color: #C41A5E;
+}
+
+.back-button {
+    background-color: #B8B8B9;
 }

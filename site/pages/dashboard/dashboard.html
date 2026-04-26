@@ -6,6 +6,8 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="../../styles/dashboard.css">
     <link rel="stylesheet" href="../../styles/modal.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../../scripts/charts.js" defer></script>
 </head>
 <body>
     <aside>
@@ -57,41 +59,85 @@
     <main>
 
         <div class="title-container">
-            <h1 class="title-text">Bem-vindo <span>*nome_usuário*</span></h1>
+            <!-- <h1 class="title-text">Bem-vindo <span>*nome_usuário*</span></h1> -->
+            <h1 class="title-text">Container: Container Com Problema</h1>
+            <h1 class="title-text">Código de Série: 0942</h1>
         </div>
         <section>
-            <div class="kpis-wrap">
-                <div class="kpi-container">
-                    <div class="kip-text-container">
-                        <img src="" alt="Ícone">
-                        <span></span>
+            <div class="dashboard-container">
+                <div class="dashboard-container-top">
+                    <div class="status-wrap">
+                        <div class="kpi-container red-kpi">
+                            <div class="kip-text-container">
+                                <span>Status</span>
+                            </div>
+                            <div class="kpi-numero-indicador">Inativo</div>
+                        </div>
+                        <div class="kpi-container blue-kpi">
+                            <div class="kip-text-container">
+                                <span>Data dos Últimos Registros</span>
+                            </div>
+                            <div class="kpi-numero-indicador">02/03/2026<br>22:29</div>
+                        </div>
                     </div>
-                    <div class="kpi-numero-indicador"></div>
                 </div>
-                <div class="kpi-container">
-                    <div class="kip-text-container">
-                        <img src="" alt="Ícone">
-                        <span></span>
+
+                <div class="dashboard-container-mid">
+                    <div class="charts-wrap">
+                        <div class="chart-container">
+                            <div class="chart-title">
+                                <h2>Variação da Temperatura</h2>
+                            </div>
+                            <div class="chart">
+                                <canvas id="chartTemperatura"></canvas>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <div class="chart-title">
+                                <h2>Variação da Umidade</h2>
+                            </div>
+                            <div class="chart">
+                                <canvas id="chartUmidade"></canvas>
+                            </div>
+                        </div>
                     </div>
-                    <div class="kpi-numero-indicador"></div>
+
+                    <div class="kpis-wrap">
+                        <div class="kpi-container red-kpi">
+                            <div class="kip-text-container">
+                                <span>Último valor de Temperatura Capturado</span>
+                            </div>
+                            <div class="kpi-numero-indicador">9.6 ºC</div>
+                        </div>
+                        <div class="kpi-container red-kpi">
+                            <div class="kip-text-container">
+                                <span>Último valor de Úmidade Capturado</span>
+                            </div>
+                            <div class="kpi-numero-indicador">18%</div>
+                        </div>
+                        <div class="kpi-container yellow-kpi">
+                            <div class="kip-text-container">
+                                <span>Média dos últimos 10 valores de Temperatura</span>
+                            </div>
+                            <div class="kpi-numero-indicador">4.6 ºC</div>
+                        </div>
+                        <div class="kpi-container yellow-kpi">
+                            <div class="kip-text-container">
+                                <span>Média dos últimos 10 valores de Umidade</span>
+                            </div>
+                            <div class="kpi-numero-indicador">58%</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="kpi-container">
-                    <div class="kip-text-container">
-                        <img src="" alt="Ícone">
-                        <span></span>
+
+                <div class="dashboard-container-bottom">
+                    <div class="buttons-wrap">
+                        <button class="dashboard-button remove-button">Remover</button>
+                        <button class="dashboard-button back-button">Voltar</button>
                     </div>
-                    <div class="kpi-numero-indicador"></div>
-                </div>
-                <div class="kpi-container">
-                    <div class="kip-text-container">
-                        <img src="" alt="Ícone">
-                        <span></span>
-                    </div>
-                    <div class="kpi-numero-indicador"></div>
                 </div>
             </div>
-            <div class="alerts"></div>
-            <div class="charts-container"></div>
+
         </section>
     </main>
 
