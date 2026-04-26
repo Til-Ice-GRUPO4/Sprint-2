@@ -6,6 +6,7 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="../../styles/dashboard.css">
     <link rel="stylesheet" href="../../styles/modal.css">
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../../scripts/charts.js" defer></script>
 </head>
@@ -17,7 +18,7 @@
                 <span>TIL-ICE</span>
             </div>
             <div class="aside-buttons-wrap">
-                <div class="aside-button current-session" onclick="window.location.href='../dashboard/dashboard.html'">
+                <div class="aside-button current-session" onclick="window.location.href='../dashboard/dashboard-geral.html'">
                     <div class="aside-button-icon-container dashboard-btn"></div>
                     <div class="aside-button-text">Dashboard</div>
                 </div>
@@ -63,7 +64,7 @@
             <h1 class="title-text">Container: Container Com Problema</h1>
             <h1 class="title-text">Código de Série: 0942</h1>
         </div>
-        <section>
+        <section class="section-dashboard">
             <div class="dashboard-container">
                 <div class="dashboard-container-top">
                     <div class="status-wrap">
@@ -132,14 +133,25 @@
 
                 <div class="dashboard-container-bottom">
                     <div class="buttons-wrap">
-                        <button class="dashboard-button remove-button">Remover</button>
-                        <button class="dashboard-button back-button">Voltar</button>
+                        <button class="dashboard-button remove-button open-modal-disable">Remover</button>
+                        <button class="dashboard-button back-button" onclick="window.location.href='dashboard-geral.html'">Voltar</button>
                     </div>
                 </div>
             </div>
 
         </section>
     </main>
+
+    <dialog class="modal modal-disable modal-container">
+        <div class="container-modal-disable">
+            <h1>Desativar Container</h1>
+            <p class="text-light">Você tem certeza que deseja desativar esse container?</p>
+            <div class="section-buttons">
+                <button class="cancel-button close-modal-disable">Cancelar</button>
+                <button class="disable-button" onclick="window.location.href='dashboard-geral.html'">Desativar</button>
+            </div>
+        </div>
+    </dialog>
 
     <script src="../../scripts/model_script.js"></script>
 

@@ -211,3 +211,43 @@
 
 .modal-end .container-modal-end .section-buttons .cancel-button { background-color: #6A717A; }
 .modal-end .container-modal-end .section-buttons .exit-button { background-color: #1AB8C4; }
+
+/* Estilizando o modal "Desativar Container" */
+.modal-container .container-modal-disable{
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.modal-container .container-modal-disable h1{
+    background-color: #FFF;
+    margin: 2rem 0;
+}
+
+.modal-container .container-modal-disable .text-light{
+    color: #787878;
+}
+
+.modal-container .container-modal-disable .info-user{
+    font-size: 24px;
+    margin: 1.5rem;
+}
+
+.modal-container .container-modal-disable .section-buttons {
+    width: 90%;
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.modal-container .container-modal-disable .section-buttons button{
+    width: 130px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 20pxs;
+    border: none;
+    color: #FFF;
+    font-weight: bold;
+    cursor: pointer;
+}

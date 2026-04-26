@@ -322,3 +322,7 @@ td {
 .efeito-branco{
     background: #EFEFF8;
 }
+
+.button-dashboard{
+    cursor: pointer;
+}
