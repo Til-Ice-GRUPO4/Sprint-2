@@ -1,0 +1,134 @@
+/* Reset dos elementos da página (de acordo com as outras) */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Archivo Black", sans-serif;
+}
+
+/* Alterando Fundo do Site e estilizando página de acordo com as outras*/
+main {
+    background-color: #B8B8B9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .container {
+    background-color: #F3F7FA;
+    width: 80%;
+    height: 800px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+main .container h1 {
+    color: #252C35;
+    font-size: 40px;
+    margin-left: 1rem;
+}
+
+main .container .container-form {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* Adicionando elemento de scroll para tabelas de lotes */
+
+tbody {
+    display: block;
+    height: 450px;
+}
+
+/* Definindo Estilo da Tabela Padrão */
+
+table {
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    border: #081C29 solid 4px;
+    padding: 1rem;
+    overflow-y: scroll;
+}
+
+td {
+    padding: 0%;
+    gap: 0%;
+    border: 0%;
+    margin: 0%;
+}
+
+.Centralizador table td {
+    margin: 0%;
+}
+
+.Centralizador {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Adicionando Elementos da tabela */
+.Container_info {
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    width: 30rem;
+    height: 6rem;
+    border-radius: 35px;
+    border: 4px solid #081C29;
+    color: black;
+    font-size: x-large;
+    cursor: default;
+    padding: .5rem
+}
+
+/* Adicinando Estilo dos Botões de Iniciar e Finalizar */
+
+.btn {
+    display: flex;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    height: 4rem;
+    width: 8rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.iniciar {
+    background-color: #1AB8C4;
+}
+
+.finalizar {
+    background-color: #C41A5E;
+}
+
+.btn.iniciar.inativo {
+    background-color: #A9A9A9;
+    cursor: not-allowed;
+}
+
+.btn.finalizar.inativo {
+    background-color: #A9A9A9;
+    cursor: not-allowed;
+}
+
+.pointer:hover {
+    cursor: pointer;
+}
+
+.BtnOutside {
+    margin-top: 2rem;
+    width: 708px
+}
