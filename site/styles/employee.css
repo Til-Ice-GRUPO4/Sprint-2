@@ -132,7 +132,7 @@ main .container .container-form{
     cursor: pointer;
 }
 
-.container .container-form .section-buttons .cadastrar-botao{
+.container .container-form .section-buttons .cancelar-botao{
     background-color: #DAE9F4;
     color: #404A59;
 }

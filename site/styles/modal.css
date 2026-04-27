@@ -251,3 +251,39 @@
     font-weight: bold;
     cursor: pointer;
 }
+
+/* Estilizando o modal de cancelar cadastro de funcionário */
+.modal-cancel h1{
+    background-color: #FFF;
+    margin: 2rem 0;
+}
+
+.modal-cancel .text-light{
+    color: #787878;
+}
+
+.modal-cancel .section-buttons {
+    width: 90%;
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.modal-cancel p{
+    margin: 2rem;
+}
+
+.modal-cancel .section-buttons button{
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 20pxs;
+    border: none;
+    color: #FFF;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-cancel .section-buttons .back-button { background-color: #6A717A; }
+.modal-cancel .section-buttons .cancel-button { background-color: #1AB8C4; }

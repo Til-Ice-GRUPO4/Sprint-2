@@ -91,12 +91,22 @@
                 </form>
 
                 <section class="section-buttons">
-                    <button class="cadastrar-botao">Cadastrar</button>
+                    <button class="cancelar-botao open-modal-cancel">Cancelar</button>
                     <button class="proximo-botao"
                         onclick="window.location.href='../funcionarios/register-employee3.html'">Próximo</button>
                 </section>
             </div>
         </div>
+        <dialog class="modal modal-cancel">
+            <div class="container-modal-cancel">
+                <h1>Cancelar Cadastro</h1>
+                <p class="text-light">Você tem certeza que deseja cancelar o cadastro?</p>
+                <div class="section-buttons">
+                    <button class="back-button close-modal-cancel">Voltar</button>
+                    <button class="cancel-button" onclick="window.location.href='../dashboard/dashboard-geral.html'">Cancelar cadastro</button>
+                </div>
+            </div>
+        </dialog>
     </main>
 
     <script src="../../scripts/model_script.js"></script>
