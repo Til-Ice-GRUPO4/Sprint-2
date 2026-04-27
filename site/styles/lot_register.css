@@ -91,6 +91,9 @@ td {
     cursor: default;
     padding: .5rem
 }
+.tabela_head{
+    color:black 
+}
 
 /* Adicinando Estilo dos Botões de Iniciar e Finalizar */
 

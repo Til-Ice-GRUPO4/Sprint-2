@@ -60,19 +60,23 @@
 
     <main>
         <div class="container">
-            <h1>Containers</h1>
+            <h1>Lote 1</h1>
             <!-- Criando tabela para exibir containeres. -->
             <div class="Centralizador">
 
                 <table>
                     <tbody>
+                        <tr class="tabela_head">
+                            <th>Checkbox</th>
+                            <th>Apelido do Container</th>
+                            <th>Status</th>
                         <tr>
                             <td>
                                 <input type="checkbox" class="pointer" onchange="AtivarBotao()">
                             </td>
                             <td>
                                 <div class="Container_info">
-                                    Container com problema
+                                    Container D
                                 </div>
                             </td>
                             <td>
@@ -87,7 +91,7 @@
                             </td>
                             <td>
                                 <div class="Container_info">
-                                    Container Velho
+                                    Container E
                                 </div>
                             </td>
                             <td>
@@ -95,6 +99,20 @@
                                 <button onclick="Finalizar()" class="btn finalizar"
                                     style="display: none;">Finalizar</button>
                             </td>
+                        </tr>tr>
+                        <td>
+                            <input type="checkbox" class="pointer" onchange="AtivarBotao()">
+                        </td>
+                        <td>
+                            <div class="Container_info">
+                                Container F
+                            </div>
+                        </td>
+                        <td>
+                            <button onclick="Iniciar()" class="btn iniciar" style="display: flex;">Iniciar</button>
+                            <button onclick="Finalizar()" class="btn finalizar"
+                                style="display: none;">Finalizar</button>
+                        </td>
                         </tr>
                         <tr>
                             <td>
@@ -217,7 +235,7 @@
             let botaoClicado = event.target;
             if (BotaoLinhaIniciar[i] === botaoClicado) {
                 linhaAtiva = i;
-                
+
                 if (BotaoLinhaIniciar[i].style.display === 'flex') {
                     BotaoLinhaIniciar[i].style.display = 'none';
                     BotaoLinhaFinalizar[i].style.display = 'flex';
@@ -234,7 +252,7 @@
             BotaoLinhaFinalizar[linhaAtiva].style.display = 'none';
         }
         modalStart.close();
-        linhaAtiva = null; 
+        linhaAtiva = null;
     });
 
     closeModalStart.addEventListener("click", (e) => {
@@ -266,7 +284,7 @@
             BotaoLinhaIniciar[linhaAtiva].style.display = 'none';
         }
         modalEnd.close();
-        linhaAtiva = null; 
+        linhaAtiva = null;
     });
 
     closeModalEnd.addEventListener("click", () => {
