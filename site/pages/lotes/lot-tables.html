@@ -59,56 +59,63 @@
 
     <main>
         <div class="container">
-            <div class="Centralizador">
-                <div class="tabela_lotes_tamanho">
-                    <table class="tabela_lotes">
-                        <tbody>
-                            <tr class="efeito_zebra">
-                                <th>Apelido <br> lote</th>
-                                <th>dt_ultima_saida</th>
-                                <th>dt_ultima_chegada</th>
-                                <th>Peso_total (tn)</th>
-                            </tr>
-                            <tr class="efeito_branco">
-                                <td>Container 1</td>
-                                <td>2024-04-01 08:00:00</td>
-                                <td>2024-04-03 14:00:00</td>
-                                <td>12.500</td>
-                            </tr>
-                            <tr class="efeito_zebra">
-                                <td>Container 2</td>
-                                <td>2024-04-02 10:30:00</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr class="efeito_branco">
-                                <td>Container 3</td>
-                                <td>2024-04-01 07:45:00</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr class="efeito_zebra">
-                                <td>Container 4</td>
-                                <td>2024-04-03 09:15:00</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <h1>Lotes</h1>
+            <div class="Centralizador_vertical">
+
+                <div class="Centralizador">
+                    <div class="tabela_lotes_tamanho">
+                        <table class="tabela_lotes">
+                            <tbody>
+                                <tr class="efeito_zebra pointer" onclick="window.location.href='lot-details.html'">
+                                    <th>Apelido <br> lote</th>
+                                    <th>dt_ultima_saida</th>
+                                    <th>dt_ultima_chegada</th>
+                                    <th>Peso_total (tn)</th>
+                                </tr>
+                                <tr class="efeito_branco pointer" onclick="window.location.href='lot-details.html'">
+                                    <td>Lote 1</td>
+                                    <td>2024-04-01 08:00:00</td>
+                                    <td>2024-04-03 14:00:00</td>
+                                    <td>12.500</td>
+                                </tr>
+                                <tr class="efeito_zebra pointer" onclick="window.location.href='lot-details.html'">
+                                    <td>Lote 2</td>
+                                    <td>2024-04-02 10:30:00</td>
+                                    <td>2024-04-04 16:20:00</td>
+                                    <td>10.200</td>
+                                </tr>
+                                <tr class="efeito_branco pointer" onclick="window.location.href='lot-details.html'">
+                                    <td>Lote 3</td>
+                                    <td>2024-04-01 07:45:00</td>
+                                    <td>2024-04-02 20:00:00</td>
+                                    <td>15.750</td>
+                                </tr>
+                                <tr class="efeito_zebra pointer" onclick="window.location.href='lot-details.html'">
+                                    <td>Lote 4</td>
+                                    <td>2024-04-03 09:15:00</td>
+                                    <td>2024-04-05 11:30:00</td>
+                                    <td>11.000</td>
+                                </tr>
+                                <tr class="efeito_branco">
+                                    <td>+ novo lote</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
+                <div class="Centralizador">
+                    <div class="paginacao">
 
-            </div>
-            <div class="Centralizador">
-                <div class="paginacao">
+                        <span class="texto-pagina">&lt; Anterior</span>
 
-                    <span class="texto-pagina">&lt; Anterior</span>
+                        <button class="pagina ativa">1</button>
+                        <button class="pagina">2</button>
+                        <button class="pagina">3</button>
 
-                    <button class="pagina ativa">1</button>
-                    <button class="pagina">2</button>
-                    <button class="pagina">3</button>
+                        <button class="proximo">Próximo</button>
 
-                    <button class="proximo">Próximo</button>
-
+                    </div>
                 </div>
             </div>
         </div>
