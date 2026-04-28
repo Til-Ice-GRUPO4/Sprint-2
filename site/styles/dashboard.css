@@ -137,13 +137,13 @@ main {
 }
 
 .red-kpi {
-    background-color: #FF2C2C;
+    background-color: #AF4637;
 }
 .blue-kpi {
     background-color: #1AB8C4;
 }
 .yellow-kpi {
-    background-color: #FFDE21;
+    background-color: #AF8A37;
 }
 
 /* STATUS */
@@ -254,7 +254,7 @@ main {
 }
 
 .remove-button {
-    background-color: #C41A5E;
+    background-color: #AF4637;
 }
 
 .back-button {
