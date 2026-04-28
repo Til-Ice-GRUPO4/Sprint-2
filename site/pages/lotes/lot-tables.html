@@ -60,6 +60,26 @@
     <main>
         <div class="container">
             <h1>Lotes</h1>
+            <div class="formulario-lote">
+                <h2>Cadastre um novo lote!</h2>
+                <div class="codigo-lote">
+                    <label for="ipt_codigo">Insira o código do lote: </label>
+                    <input type="text" id="ipt_codigo" placeholder="Insira um código de lote">
+                </div>
+                <div class="peso-total">
+                    <label for="ipt_peso">Insira o peso total do lote (em toneladas): </label>
+                    <input type="text" id="ipt_peso" placeholder="Insira um peso em toneladas">
+                </div>
+                <button onclick="loteCadastrado()">Cadastar</button>
+            </div>
+
+
+            <div class="texto-dica">
+                <p>
+                Escolha um lote para atributo-lo a um container
+                </p>
+            </div>
+
             <div class="Centralizador_vertical">
 
                 <div class="Centralizador">
@@ -67,7 +87,7 @@
                         <table class="tabela_lotes">
                             <tbody>
                                 <tr class="efeito_zebra pointer" onclick="window.location.href='lot-details.html'">
-                                    <th>Apelido <br> lote</th>
+                                    <th>Código <br> lote</th>
                                     <th>dt_ultima_saida</th>
                                     <th>dt_ultima_chegada</th>
                                     <th>Peso_total (tn)</th>
@@ -96,15 +116,12 @@
                                     <td>2024-04-05 11:30:00</td>
                                     <td>11.000</td>
                                 </tr>
-                                <tr class="efeito_branco">
-                                    <td>+ novo lote</td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
 
                 </div>
-                <div class="Centralizador">
+                <!-- <div class="Centralizador">
                     <div class="paginacao">
 
                         <span class="texto-pagina">&lt; Anterior</span>
@@ -116,7 +133,7 @@
                         <button class="proximo">Próximo</button>
 
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -124,5 +141,12 @@
 </body>
 
 <script src="../../scripts/model_script.js"></script>
+
+<script>
+    function loteCadastrado() {
+        alert('Lote cadastrado com sucesso!')
+        window.location.href='../lotes/lot-tables.html';
+    }
+</script>
 
 </html>

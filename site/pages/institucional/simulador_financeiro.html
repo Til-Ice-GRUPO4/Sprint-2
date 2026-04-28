@@ -37,11 +37,17 @@ html, body {
 
 label, span {
     font-weight: 400;
-    font-size: 25px;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+span{
+    font-size: 1.25rem;
 }
 
 input {
     height: 2em;
+    font-size: 1rem;
 }
 
 .title-container {
@@ -80,7 +86,7 @@ button {
     cursor: pointer;
     transition: all 0.2s ease;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 button:hover {
@@ -164,7 +170,7 @@ button:hover {
             mensagem_simulador.innerHTML = `
                 <span> Segundo o relatório do The State of World Fisheries and Aquaculture, cerca de 9% de todo peso é perdido pelo processo de gotejamento.<br><br>
                 Com base nos valores passados acima sua empresa está perdendo anualmente <span style="color: red;">$${perdas_valor.toFixed(2)}</span> de dólares. E perdeu <span style="color: red;">${perdas.toFixed(2)} toneladas </span> durante os transportes.<br><br>
-                Nosso projeto visa diminuir entre <span style="color: limegreen;">$${reducao_perda_valor_minimo.toFixed(2)}</span> a <span style="color: limegreen;">$${reducao_perda_valor_maximo.toFixed(2)}</span> dólares de perda.
+                Nosso projeto visa diminuir entre <span style="color: #12A212;">$${reducao_perda_valor_minimo.toFixed(2)}</span> a <span style="color: #12A212;">$${reducao_perda_valor_maximo.toFixed(2)}</span> dólares de perda.
                 O nosso projeto pode se pagar em até <b>${texto_retorno}.</b> </span>
             `
         }
@@ -194,7 +200,7 @@ button:hover {
             mensagem_simulador.innerHTML = `
                 <span> Segundo o relatório do The State of World Fisheries and Aquaculture, cerca de 9% de todo peso é perdido pelo processo de gotejamento.<br><br>
                 Com base nos valores passados acima sua empresa está perdendo mensalmente <span style="color: red;">$${perdas_valor_mensal.toFixed(2)}</span> de dólares. E perdeu <span style="color: red;">${perdas.toFixed(2)} toneladas </span> durante os transportes.<br><br>
-                Nosso projeto visa diminuir entre <span style="color: limegreen;">$${reducao_perda_valor_minimo.toFixed(2)}</span> a <span style="color: limegreen;">$${reducao_perda_valor_maximo.toFixed(2)}</span> dólares de perda.
+                Nosso projeto visa diminuir entre <span style="color: #12A212;">$${reducao_perda_valor_minimo.toFixed(2)}</span> a <span style="color: #12A212;">$${reducao_perda_valor_maximo.toFixed(2)}</span> dólares de perda.
                 O nosso projeto pode se pagar em até <b>${texto_retorno}.</b> </span>
             `
         }
@@ -223,7 +229,7 @@ button:hover {
             mensagem_simulador.innerHTML = `
                 <span> Segundo o relatório do The State of World Fisheries and Aquaculture, cerca de 9% de todo peso é perdido pelo processo de gotejamento.<br><br>
                 Com base nos valores passados acima sua empresa está perdendo semanalmente <span style="color: red;">$${perdas_valor_semanal.toFixed(2)}</span> de dólares. E perdeu <span style="color: red;">${perdas.toFixed(2)} toneladas </span> durante os transportes.<br><br>
-                Nosso projeto visa diminuir entre <span style="color: limegreen;">$${reducao_perda_valor_minimo.toFixed(2)}</span> a <span style="color: limegreen;">$${reducao_perda_valor_maximo.toFixed(2)}</span> dólares de perda.
+                Nosso projeto visa diminuir entre <span style="color: #12A212;">$${reducao_perda_valor_minimo.toFixed(2)}</span> a <span style="color: #12A212;">$${reducao_perda_valor_maximo.toFixed(2)}</span> dólares de perda.
                 O nosso projeto pode se pagar em até <b>${texto_retorno}.</b> </span>
             `
         }

@@ -24,7 +24,7 @@ body {
 
 /* Barra lateral da Dashboard */
 aside {
-    width: 25%;
+    width: 20%;
     background-color: #081C29;
     height: 100%;
     display: flex;
@@ -99,7 +99,7 @@ aside {
 main {
     display: flex;
     flex-direction: column;
-    width: 75%;
+    width: 80%;
 }
 
 .title-container {
@@ -137,13 +137,16 @@ main {
 }
 
 .red-kpi {
-    background-color: #AF4637;
+    background-color: #FF2C2C;
 }
 .blue-kpi {
     background-color: #1AB8C4;
 }
 .yellow-kpi {
-    background-color: #AF8A37;
+    background-color: #d6b80c;
+}
+.green-kpi {
+    background-color: #12A212;
 }
 
 /* STATUS */
@@ -170,7 +173,8 @@ main {
         text-align: center;
         width: 100%;
         font-weight: 400;
-        font-size: .9rem;
+        font-size: 1rem;
+        font-weight: bold;
     }
 }
 
@@ -180,7 +184,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 200%;
+    font-size: 170%;
     text-align: center;
     font-weight: 800;
 }
@@ -254,7 +258,7 @@ main {
 }
 
 .remove-button {
-    background-color: #AF4637;
+    background-color: #C41A5E;
 }
 
 .back-button {

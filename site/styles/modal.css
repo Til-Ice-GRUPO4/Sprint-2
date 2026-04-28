@@ -90,7 +90,7 @@
 }
 
 .modal-disable .container-modal-disable .section-buttons .cancel-button { background-color: #6A717A; }
-.modal-disable .container-modal-disable .section-buttons .disable-button { background-color: #1AB8C4; }
+.modal-disable .container-modal-disable .section-buttons .disable-button { background-color: #C41A5E; }
 
 /* Estilizando os modals da tela "registro container" */
 
@@ -210,7 +210,7 @@
 }
 
 .modal-end .container-modal-end .section-buttons .cancel-button { background-color: #6A717A; }
-.modal-end .container-modal-end .section-buttons .exit-button { background-color: #1AB8C4; }
+.modal-end .container-modal-end .section-buttons .exit-button { background-color: #C41A5E; }
 
 /* Estilizando o modal "Desativar Container" */
 .modal-container .container-modal-disable{
@@ -251,6 +251,8 @@
     font-weight: bold;
     cursor: pointer;
 }
+
+.modal-container .container-modal-disable .section-buttons .disable-button{ background-color: #C41A5E; }
 
 /* Estilizando o modal de cancelar cadastro de funcionário */
 .modal-cancel h1{

@@ -236,11 +236,11 @@ tbody {
     padding: 1rem;
 }
 
-.section-buttons .section-left{
+/* .section-buttons .section-left{
     width: 500px;
     display: flex;
     justify-content: space-between;
-}
+} */
 
 .section-buttons button{
     border: none;
@@ -253,7 +253,13 @@ tbody {
     cursor: pointer;
 }
 
-.section-buttons .section-left .button,
+.section-buttons .section-right{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+/* .section-buttons .section-left .button, */
 .section-buttons .section-right .button{
     display: flex;
     align-items: center;
@@ -261,7 +267,7 @@ tbody {
     flex-direction: column;
 }
 
-.section-buttons .section-left p,
+/* .section-buttons .section-left p, */
 .section-buttons .section-right p{
     width: 217px;
     text-align: center;

@@ -30,7 +30,8 @@ main .container {
 main .container h1 {
     color: #252C35;
     font-size: 40px;
-    margin-left: 1rem;
+    text-align: center;
+    margin: 1rem 0;
 }
 
 main .container .container-form {
@@ -56,9 +57,10 @@ main .container .container-form {
     display: flex;
     width: fit-content;
     justify-content: center;
-    border: #081C29 solid 4px;
-    padding: 1rem;
+    border: #081C29 solid 3px;
+    padding: 1rem 2rem;
     overflow-y: scroll;
+    border-radius: 20px;
 }
 
 .tabela_containers td {
@@ -76,10 +78,11 @@ main .container .container-form {
     margin: 2rem;
     display: flex;
     align-items: center;
-    width: 30rem;
+    justify-content: center;
+    width: 20rem;
     height: 6rem;
-    border-radius: 35px;
-    border: 4px solid #081C29;
+    /* border-radius: 35px;
+    border: 4px solid #081C29; */
     color: black;
     font-size: x-large;
     cursor: default;
@@ -88,6 +91,12 @@ main .container .container-form {
 
 .tabela_containers .tabela_head {
     color: black
+}
+
+.tabela_containers tbody tr td input[type=checkbox]{
+    width: 50px;
+    height: 50px;
+    margin-left: 1rem;
 }
 
 /* Formatando Divs Personalizadas */
@@ -101,7 +110,7 @@ main .container .container-form {
 .div_space_between {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 80%;
 }
 
 .Right-side {
@@ -112,10 +121,9 @@ main .container .container-form {
 .Centralizador_vertical {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 200px;
     justify-content: center;
     align-items: center;
-    padding-bottom: 10%;
 }
 
 /* Estilizando tabela de lotes */
@@ -127,6 +135,8 @@ main .container .container-form {
     background-color: #EFEFF8;
     border-radius: 8px;
     overflow: hidden;
+
+    border: 3px solid #222;
 }
 
 .tabela_lotes {
@@ -187,6 +197,7 @@ main .container .container-form {
 
 .iniciar {
     background-color: #1AB8C4;
+    width: 300px;
 }
 
 .finalizar {
@@ -275,4 +286,75 @@ main .container .container-form {
 
 .proximo {
     padding: 0 12px;
+}
+
+/* Estilizando o formulario de cadastrar lotes */
+.formulario-lote{
+    background-color: #CFF2F4;
+    border: 3px solid #378AAF;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    color: #081C29;
+    width: 50%;
+    height: 45%;
+    margin: 0 auto;
+}
+
+.formulario-lote input{
+    height: 25px;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 15px 0;
+}
+
+.formulario-lote label{
+    width: 120%;
+}
+
+.codigo-lote,
+.peso-total{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 60%;
+}
+
+.formulario-lote button{
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #1AB8C4;
+    color: #F3F7FA;
+    border: none;
+}
+
+.texto-dica {
+    width: 750px;
+    max-width: 92%;
+    height: 60px;
+    margin: 20px auto 15px auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+
+    background: #dfe4f2;
+    border: 3px solid #378AAF;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.texto-dica p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #222222;
+    line-height: 1.3;
 }
