@@ -29,7 +29,7 @@ function auth_login() {
     }
     
     alert("Admin entrou!")
-    changePage("../../index.html")
+    changePage("../dashboard/dashboard-geral.html")
 }
 
 function auth_register_step1() {
@@ -84,5 +84,5 @@ function auth_register_step2() {
     }
 
     alert("Novo usuário cadastrado com sucesso!")
-    changePage("../../index.html")
+    changePage("./login.html")
 }
