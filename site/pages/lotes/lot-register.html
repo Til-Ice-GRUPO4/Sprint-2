@@ -29,7 +29,7 @@
                     <div class="aside-button-icon-container cadastrar-funcionario-btn"></div>
                     <div class="aside-button-text">Cadastrar Funcionário</div>
                 </div>
-                <div class="aside-button current-session" ; onclick="window.location.href='../lotes/lot-register.html'">
+                <div class="aside-button current-session" ; onclick="window.location.href='../lotes/lot-tables.html'">
                     <div class="aside-button-icon-container registro-de-lotes-btn"></div>
                     <div class="aside-button-text">Registro de Lotes</div>
                 </div>
@@ -50,7 +50,7 @@
     <dialog class="modal modal-exit">
         <div class="container-modal-exit">
             <h1>Confirmar Saída</h1>
-            <p>Tem certeza que deseja sair da seseão?</p>
+            <p>Tem certeza que deseja sair da sessão?</p>
             <div class="section-buttons">
                 <button class="cancel-button close-modal-exit">Cancelar</button>
                 <button class="exit-button" onclick="window.location.href='../../index.html'">Sair</button>
@@ -64,7 +64,7 @@
             <!-- Criando tabela para exibir containeres. -->
             <div class="Centralizador">
 
-                <table>
+                <table class="tabela_containers">
                     <tbody>
                         <tr class="tabela_head">
                             <th>Checkbox</th>
@@ -99,7 +99,7 @@
                                 <button onclick="Finalizar()" class="btn finalizar"
                                     style="display: none;">Finalizar</button>
                             </td>
-                        </tr>tr>
+                        </tr>
                         <td>
                             <input type="checkbox" class="pointer" onchange="AtivarBotao()">
                         </td>
@@ -163,11 +163,16 @@
                 </table>
             </div>
             <div class="Centralizador">
-                <div class="BtnOutside">
-                    <button class="btn iniciar" onclick="Iniciar()" id="IniciarGeral"
-                        style="display: flex;">Iniciar</button>
-                    <button class="btn finalizar" onclick="Finalizar()" id="FinalizarGeral"
-                        style="display: none;">Finalizar</button>
+                <div class="div_space_between">
+                    <div class="BtnOutside">
+                        <button class="btn iniciar" onclick="Iniciar()" id="IniciarGeral"
+                            style="display: flex;">Iniciar</button>
+                        <button class="btn finalizar" onclick="Finalizar()" id="FinalizarGeral"
+                            style="display: none;">Finalizar</button>
+                    </div>
+                    <div class="BtnOutside Right-side">
+                        <button class="btn" onclick="window.location.href='../lotes/lot-tables.html'">Voltar</button>
+                    </div>
                 </div>
             </div>
         </div>
