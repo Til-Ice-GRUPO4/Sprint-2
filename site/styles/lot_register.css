@@ -1,6 +1,7 @@
 /* Reset dos elementos da página (de acordo com as outras) */
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
@@ -44,7 +45,7 @@ main .container .container-form {
 
 /* Adicionando elemento de scroll para tabelas de lotes */
 
-tbody {
+.tabela_containers tbody {
     display: block;
     height: 450px;
 }
@@ -108,6 +109,15 @@ tbody {
     justify-content: flex-end;
 }
 
+.Centralizador_vertical {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10%;
+}
+
 /* Estilizando tabela de lotes */
 .tabela_lotes_tamanho {
     width: 80%;
@@ -119,49 +129,36 @@ tbody {
     overflow: hidden;
 }
 
-.tabela_lotes_tamanho .tabela_lotes table tbody {
+.tabela_lotes {
     width: 100%;
-    box-sizing: border-box;
+    overflow-x: auto;
+}
 
-    background-color: #EFEFF8;
-    border-radius: 8px;
-    overflow: hidden;
+.tabela_lotes table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela_lotes thead,
+.tabela_lotes tbody {
+    width: 100%;
+    color: #7b7f88;
+}
+
+.tabela_lotes th,
+.tabela_lotes td {
+    padding: 8px;
+    font-size: 15px;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .tabela_lotes_tamanho .tabela_lotes table tbody tr {
     width: 100%;
-
-    background: white;
-    text-align: center;
-    white-space: nowrap;
 }
 
-.tabela_lotes_tamanho .tabela_lotes .efeito_zebra th {
-    padding: 7px;
-    font-size: 15px;
-    color: #545862;
-    text-align: center;
-    white-space: nowrap;
-}
-
-.tabela_lotes_tamanho .tabela_lotes .efeito_zebra td {
-    padding: 6px;
-    font-size: 15px;
-    color: #6d6d6d;
-    font-weight: bold;
-    text-align: center;
-    white-space: nowrap;
-    border-bottom: 1px solid #eee;
-}
-
-.tabela_lotes_tamanho .tabela_lotes .efeito_branco td {
-    padding: 6px;
-    font-size: 15px;
-    color: #6d6d6d;
-    font-weight: bold;
-    text-align: center;
-    white-space: nowrap;
-    border-bottom: 1px solid #eee;
+.paginacao {
+    width: 100%;
 }
 
 .tabela_lotes .efeito_zebra {
@@ -242,6 +239,14 @@ tbody {
     justify-content: flex-end;
     align-items: center;
     gap: 6px;
+}
+
+.texto-pagina {
+    margin-right: 8px;
+
+    font-size: 11px;
+    color: #8a8d95;
+    font-weight: bold;
 }
 
 .pagina,
