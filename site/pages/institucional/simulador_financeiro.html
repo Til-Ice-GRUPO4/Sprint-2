@@ -37,7 +37,7 @@ html, body {
 
 label, span {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 25px;
 }
 
 input {
@@ -80,7 +80,7 @@ button {
     cursor: pointer;
     transition: all 0.2s ease;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 30px;
 }
 
 button:hover {
@@ -116,6 +116,32 @@ button:hover {
     </div>
 </body>
 <script>
+    function formatarROI(meses) {
+    let anos = Math.floor(meses / 12);
+    let mesesRestantes = Math.floor(meses % 12);
+    let dias = Math.round((meses - Math.floor(meses)) * 30);
+
+    let texto = "";
+
+    if (anos > 0) {
+        texto += `${anos} ano${anos > 1 ? "s" : ""}`;
+    }
+
+    if (mesesRestantes > 0) {
+        if (texto != "") texto += " e ";
+        texto += `${mesesRestantes} mes${mesesRestantes > 1 ? "es" : ""}`;
+    }
+
+    if (anos == 0 && mesesRestantes == 0 && dias > 0) {
+        texto += `${dias} dia${dias > 1 ? "s" : ""}`;
+    }
+
+    if (texto == "") {
+        texto = "menos de 1 dia";
+    }
+
+    return texto;
+}
     function simulacao_anual() {
         let total_toneladas = Number(ipt_peso_toneladas.value);
         let preco_kg = Number(ipt_preco_kg.value);
@@ -128,7 +154,8 @@ button:hover {
         let reducao_perda_valor_minimo = perdas_valor * 0.15;
         let reducao_perda_valor_maximo = perdas_valor * 0.23;
 
-        let retorno_valor_tempo = custo_projeto / reducao_perda_valor_minimo
+        let retorno_valor_tempo = (custo_projeto / reducao_perda_valor_minimo) * 12;
+        let texto_retorno = formatarROI(retorno_valor_tempo);
 
         if (total_toneladas <= 0 || preco_kg <= 0) {
             mensagem_simulador.innerHTML = '<span>APENAS VALORES POSITIVOS OU MAIOR QUE 0 SERAM ACEITOS !!</span> ';
@@ -138,7 +165,7 @@ button:hover {
                 <span> Segundo o relatório do The State of World Fisheries and Aquaculture, cerca de 9% de todo peso é perdido pelo processo de gotejamento.<br><br>
                 Com base nos valores passados acima sua empresa está perdendo anualmente <span style="color: red;">$${perdas_valor.toFixed(2)}</span> de dólares. E perdeu <span style="color: red;">${perdas.toFixed(2)} toneladas </span> durante os transportes.<br><br>
                 Nosso projeto visa diminuir entre <span style="color: limegreen;">$${reducao_perda_valor_minimo.toFixed(2)}</span> a <span style="color: limegreen;">$${reducao_perda_valor_maximo.toFixed(2)}</span> dólares de perda.
-                O nosso projeto pode se pagar em até <b>${retorno_valor_tempo.toFixed(1)} anos.</b> </span>
+                O nosso projeto pode se pagar em até <b>${texto_retorno}.</b> </span>
             `
         }
 
@@ -157,7 +184,8 @@ button:hover {
         let reducao_perda_valor_minimo = perdas_valor * 0.15;
         let reducao_perda_valor_maximo = perdas_valor * 0.23;
 
-        let retorno_valor_tempo = custo_projeto / reducao_perda_valor_minimo
+        let retorno_valor_tempo = (custo_projeto / reducao_perda_valor_minimo) * 12;
+        let texto_retorno = formatarROI(retorno_valor_tempo);
 
         if (total_toneladas <= 0 || preco_kg <= 0) {
             mensagem_simulador.innerHTML = '<span>APENAS VALORES POSITIVOS OU MAIOR QUE 0 SERAM ACEITOS !!</span> ';
@@ -167,7 +195,7 @@ button:hover {
                 <span> Segundo o relatório do The State of World Fisheries and Aquaculture, cerca de 9% de todo peso é perdido pelo processo de gotejamento.<br><br>
                 Com base nos valores passados acima sua empresa está perdendo mensalmente <span style="color: red;">$${perdas_valor_mensal.toFixed(2)}</span> de dólares. E perdeu <span style="color: red;">${perdas.toFixed(2)} toneladas </span> durante os transportes.<br><br>
                 Nosso projeto visa diminuir entre <span style="color: limegreen;">$${reducao_perda_valor_minimo.toFixed(2)}</span> a <span style="color: limegreen;">$${reducao_perda_valor_maximo.toFixed(2)}</span> dólares de perda.
-                O nosso projeto pode se pagar em até <b>${retorno_valor_tempo.toFixed(1)} anos.</b> </span>
+                O nosso projeto pode se pagar em até <b>${texto_retorno}.</b> </span>
             `
         }
     }
@@ -185,7 +213,8 @@ button:hover {
         let reducao_perda_valor_minimo = perdas_valor * 0.15;
         let reducao_perda_valor_maximo = perdas_valor * 0.23;
 
-        let retorno_valor_tempo = custo_projeto / reducao_perda_valor_minimo
+        let retorno_valor_tempo = (custo_projeto / reducao_perda_valor_minimo) * 12;
+        let texto_retorno = formatarROI(retorno_valor_tempo);
 
         if (total_toneladas <= 0 || preco_kg <= 0) {
             mensagem_simulador.innerHTML = '<span>APENAS VALORES POSITIVOS OU MAIOR QUE 0 SERAM ACEITOS !!</span> ';
@@ -195,7 +224,7 @@ button:hover {
                 <span> Segundo o relatório do The State of World Fisheries and Aquaculture, cerca de 9% de todo peso é perdido pelo processo de gotejamento.<br><br>
                 Com base nos valores passados acima sua empresa está perdendo semanalmente <span style="color: red;">$${perdas_valor_semanal.toFixed(2)}</span> de dólares. E perdeu <span style="color: red;">${perdas.toFixed(2)} toneladas </span> durante os transportes.<br><br>
                 Nosso projeto visa diminuir entre <span style="color: limegreen;">$${reducao_perda_valor_minimo.toFixed(2)}</span> a <span style="color: limegreen;">$${reducao_perda_valor_maximo.toFixed(2)}</span> dólares de perda.
-                O nosso projeto pode se pagar em até <b>${retorno_valor_tempo.toFixed(1)} anos.</b> </span>
+                O nosso projeto pode se pagar em até <b>${texto_retorno}.</b> </span>
             `
         }
     }
