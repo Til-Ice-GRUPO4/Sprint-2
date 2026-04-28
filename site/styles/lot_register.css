@@ -49,9 +49,9 @@ tbody {
     height: 450px;
 }
 
-/* Definindo Estilo da Tabela Padrão */
+/* Definindo Estilo da Tabela de Containers */
 
-table {
+.tabela_containers {
     display: flex;
     width: fit-content;
     justify-content: center;
@@ -60,24 +60,17 @@ table {
     overflow-y: scroll;
 }
 
-td {
+.tabela_containers td {
     padding: 0%;
     gap: 0%;
     border: 0%;
     margin: 0%;
 }
 
-.Centralizador table td {
+.Centralizador .tabela_containers td {
     margin: 0%;
 }
 
-.Centralizador {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-
-/* Adicionando Elementos da tabela */
 .Container_info {
     margin: 2rem;
     display: flex;
@@ -91,9 +84,94 @@ td {
     cursor: default;
     padding: .5rem
 }
-.tabela_head{
-    color:black 
+
+.tabela_containers .tabela_head {
+    color: black
 }
+
+/* Formatando Divs Personalizadas */
+
+.Centralizador {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.div_space_between {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Right-side {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Estilizando tabela de lotes */
+.tabela_lotes_tamanho {
+    width: 80%;
+    padding-top: 10px;
+    box-sizing: border-box;
+
+    background-color: #EFEFF8;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabela_lotes_tamanho .tabela_lotes table tbody {
+    width: 100%;
+    box-sizing: border-box;
+
+    background-color: #EFEFF8;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabela_lotes_tamanho .tabela_lotes table tbody tr {
+    width: 100%;
+
+    background: white;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.tabela_lotes_tamanho .tabela_lotes .efeito_zebra th {
+    padding: 7px;
+    font-size: 15px;
+    color: #545862;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.tabela_lotes_tamanho .tabela_lotes .efeito_zebra td {
+    padding: 6px;
+    font-size: 15px;
+    color: #6d6d6d;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    border-bottom: 1px solid #eee;
+}
+
+.tabela_lotes_tamanho .tabela_lotes .efeito_branco td {
+    padding: 6px;
+    font-size: 15px;
+    color: #6d6d6d;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    border-bottom: 1px solid #eee;
+}
+
+.tabela_lotes .efeito_zebra {
+    background-color: #DFE2EF;
+}
+
+.tabela_lotes .efeito_branco {
+    background: #EFEFF8;
+}
+
 
 /* Adicinando Estilo dos Botões de Iniciar e Finalizar */
 
@@ -107,6 +185,7 @@ td {
     width: 8rem;
     align-items: center;
     justify-content: center;
+    background-color: darkgray;
 }
 
 .iniciar {
@@ -142,7 +221,53 @@ td {
         width: 80%;
         height: 680px;
     }
+
     .Container_info {
         margin: 0.5rem;
     }
+}
+
+/* Adicionando Paginacao para tabela de lotes */
+
+.paginacao {
+    height: 38px;
+    padding-right: 40px;
+    box-sizing: border-box;
+    width: 80%;
+
+    background-color: #d9deec;
+    border-top: 1px solid #b6bbc6;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 6px;
+}
+
+.pagina,
+.proximo {
+    height: 24px;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    background: #8d929c;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.pagina {
+    width: 24px;
+}
+
+.pagina.ativa {
+    background: #e6e9f0;
+    color: #7b7f88;
+    border: 1px solid #9ca1aa;
+}
+
+.proximo {
+    padding: 0 12px;
 }
